@@ -1,9 +1,9 @@
 {
   "header": {
-    "button": "Get in touch",
     "menu": {
       "services": "Services",
-      "projects": "Projects"
+      "projects": "Projects",
+      "about": "About"
     }
 
   },
@@ -34,36 +34,37 @@
       "title": "Google Ads & Grants",
       "description": "We offer the full suite of Google Ads services, including Search, Display, and YouTube campaigns, as well as specialised Grants management for non-profits."
     }
+},
+"projects": {
+  "heading": "Projects",
+  "subtitle": "Here are some of projects we're proud to have worked on (or still do!).",
+  "first": {
+    "name": "Kudos Donations",
+    "summary": "A free, open-source donation plugin for non-profit WordPress websites.",
+    "description": "Used by hundreds of organisations, we developed Kudos especially for non-profits who are looking to raise donations through their own website."
   },
-  "projects": {
-    "heading": "Projects",
-    "subtitle": "Here are some of projects we're proud to have worked on (or still do!).",
-    "first": {
-      "name": "Kudos Donations",
-      "summary": "A free, open-source donation plugin for non-profit WordPress websites.",
-      "description": "Used by hundreds of organisations, we developed Kudos especially for non-profits who are looking to raise donations through their own website."
-    },
-    "second": {
-      "name": "Loosduinen Gaat Los",
-      "summary": "Bespoke cultural festival website with local marketing support",
-      "description": "We built the website for this local arts & culture festival and support them every year with their marketing campaign. A true five days of fun."
-    },
-    "third": {
-      "name": "Family walking trail",
-      "summary": "A web app with QR walking trail",
-      "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
-    }
+  "second": {
+    "name": "Loosduinen Gaat Los",
+    "summary": "Bespoke cultural festival website with local marketing support",
+    "description": "We built the website for this local arts & culture festival and support them every year with their marketing campaign. A true five days of fun."
   },
-  "cta": {
-    "heading": "Who we are",
-    "subtext": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
-    "button": "Get in touch"
-  },
-  "footer": {
-    "menu": {
-      "services": "Services",
-      "projects": "Projects"
-    },
-    "copyright": "Copyright 2025 Iseard Media. All rights reserved."
+  "third": {
+    "name": "Family walking trail",
+    "summary": "A web app with QR walking trail",
+    "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
   }
+},
+"cta": {
+  "heading": "Who we are",
+  "subtext": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
+  "button": "Get in touch"
+},
+"footer": {
+  "menu": {
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About"
+  },
+  "copyright": "Copyright © 2025 Iseard Media. All rights reserved. Download our terms and conditions."
+}
 }
