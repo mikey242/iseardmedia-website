@@ -1,8 +1,67 @@
 {
+    "header": {
+      "button": "Get in touch",
+      "menu": {
+        "services": "Services",
+        "projects": "Projects"
+      }
+
+    },
     "hero": {
-      "heading": "Hello world!",
-      "subtext": "Go to the about page",
-      "button": "Click here!",
-      "partners": "Trusted by our partners "
+      "heading": "Your trusted partner in smart, effective marketing",
+      "subtext": "We provide expert advice and technical solutions to optimise your marketing campaigns and achieve measurable results. We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services.",
+      "button": "Get in touch",
+      "partners": "We've worked with lots of amazing organisations"
+    },
+    "services": {
+      "heading": "Dit is de heading",
+      "subtext": "Dit is de subtext",
+      "first": {
+        "title": "Titel 1",
+        "description": "Description 1"
+      },
+        "second": {
+        "title": "Titel 2",
+        "description": "Description 2"
+      },
+      "third": {
+        "title": "Titel 3",
+        "description": "Description 3"
+      },
+      "fourth": {
+        "title": "Titel 4",
+        "description": "Description 4"
+      }
+  },
+  "projects": {
+    "heading": "Projects",
+    "subtitle": "Our projects",
+    "first": {
+      "name": "First project",
+      "summary": "Summary 1",
+      "description": "Description 1"
+    },
+    "second": {
+      "name": "Second project",
+      "summary": "Summary 2",
+      "description": "Description 2"
+    },
+    "third": {
+      "name": "Third project",
+      "summary": "Summary 3",
+      "description": "Description 3"
     }
+  },
+  "cta": {
+    "heading": "Get in touch!",
+    "subtext": "We're standing by",
+    "button": "Get in touch"
+  },
+  "footer": {
+    "menu": {
+      "services": "Services",
+      "projects": "Projects"
+    },
+    "copyright": "Copyright 2025 Iseard Media. All rights reserved."
   }
+}
