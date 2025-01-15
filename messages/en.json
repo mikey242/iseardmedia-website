@@ -15,7 +15,7 @@
     },
     "services": {
       "heading": "Services",
-      "subtext": "We bring clarity and precision to your marketing. Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact.",
+      "subtext": "Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact. We bring clarity and precision to your marketing through the following services.",
       "first": {
         "title": "Campaign consultation",
         "description": "We refine and optimise new and existing campaigns with expert consultation and strategic guidance."
@@ -35,26 +35,26 @@
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Here are some of projects we're proud to be working on.",
+    "subtitle": "Here are some of projects we're proud to have worked on (or still do!).",
     "first": {
       "name": "Kudos Donations",
-      "summary": "This is a summary of Kudos Donations",
-      "description": "A free, open-source donations plugin for WordPress used by hundreds of non-profits."
+      "summary": "A free, open-source donation plugin for non-profit WordPress websites.",
+      "description": "Used by hundreds of organisations, we developed Kudos especially for non-profits who are looking to raise donations through their own website."
     },
     "second": {
-      "name": "Second project",
-      "summary": "Summary 2",
-      "description": "Description 2"
+      "name": "Loosduinen Gaat Los",
+      "summary": "Bespoke cultural festival website with local marketing support",
+      "description": "We built the website for this local arts & culture festival and support them every year with their marketing campaign. A true five days of fun."
     },
     "third": {
-      "name": "",
-      "summary": "Summary 3",
-      "description": "Description 3"
+      "name": "Family walking trail",
+      "summary": "A web app with QR walking trail",
+      "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
     }
   },
   "cta": {
-    "heading": "Get in touch!",
-    "subtext": "We're standing by",
+    "heading": "Who we are",
+    "subtext": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
     "button": "Get in touch"
   },
   "footer": {
@@ -66,7 +66,7 @@
   },
   "about": {
     "eyebrow": "",
-    "heading": "Who we are",
-    "subtext": "Based in the Netherlands, we are a specialised marketing agency that collaborates with organisations across Europe to create meaningful, measurable change. Combining over a decade of expertise in strategy, analytics, and technical development, we are driven by a passion for helping our clients achieve their goals and make a positive impact"
+    "heading": "",
+    "subtext": ""
   }
 }
