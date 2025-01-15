@@ -8,38 +8,38 @@
 
     },
     "hero": {
-      "heading": "Your trusted partner in smart, effective marketing",
-      "subtext": "We provide expert advice and technical solutions to optimise your marketing campaigns and achieve measurable results. We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services.",
+      "heading": "Your trusted partner in effective marketing",
+      "subtext": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results. ",
       "button": "Get in touch",
       "partners": "We've worked with lots of amazing organisations"
     },
     "services": {
-      "heading": "Dit is de heading",
-      "subtext": "Dit is de subtext",
+      "heading": "Services",
+      "subtext": "We bring clarity and precision to your marketing. Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact.",
       "first": {
-        "title": "Titel 1",
-        "description": "Description 1"
+        "title": "Campaign consultation",
+        "description": "We refine and optimise new and existing campaigns with expert consultation and strategic guidance."
       },
         "second": {
-        "title": "Titel 2",
-        "description": "Description 2"
+        "title": "Landing pages",
+        "description": "We build high-performing landing pages tailored to your audience and goals, designed to convert."
       },
       "third": {
-        "title": "Titel 3",
-        "description": "Description 3"
+        "title": "Dashboards & tracking",
+        "description": "We measure your goals effectively with tailored performance dashboards and precise tracking, turning your marketing data into actionable insights."
       },
       "fourth": {
-        "title": "Titel 4",
-        "description": "Description 4"
+        "title": "Google Ads & Grants",
+        "description": "We offer the full suite of Google Ads services, including Search, Display, and YouTube campaigns, as well as specialised Grants management for non-profits."
       }
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Our projects",
+    "subtitle": "Here are some of projects we're proud to be working on.",
     "first": {
-      "name": "First project",
-      "summary": "Summary 1",
-      "description": "Description 1"
+      "name": "Kudos Donations",
+      "summary": "This is a summary of Kudos Donations",
+      "description": "A free, open-source donations plugin for WordPress used by hundreds of non-profits."
     },
     "second": {
       "name": "Second project",
@@ -47,7 +47,7 @@
       "description": "Description 2"
     },
     "third": {
-      "name": "Third project",
+      "name": "",
       "summary": "Summary 3",
       "description": "Description 3"
     }
@@ -63,5 +63,10 @@
       "projects": "Projects"
     },
     "copyright": "Copyright 2025 Iseard Media. All rights reserved."
+  },
+  "about": {
+    "eyebrow": "",
+    "heading": "Who we are",
+    "subtext": "Based in the Netherlands, we are a specialised marketing agency that collaborates with organisations across Europe to create meaningful, measurable change. Combining over a decade of expertise in strategy, analytics, and technical development, we are driven by a passion for helping our clients achieve their goals and make a positive impact"
   }
 }

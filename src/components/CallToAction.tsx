@@ -4,6 +4,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-call-to-action.jpg'
 import { useTranslations } from 'next-intl';
+import AboutUs from './AboutUs';
 
 export function CallToAction() {
   const t = useTranslations('cta');
