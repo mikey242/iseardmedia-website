@@ -1,6 +1,8 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
+    "hero": {
+      "heading": "Hello world!",
+      "subtext": "Go to the about page",
+      "button": "Click here!",
+      "partners": "Trusted by our partners "
     }
   }

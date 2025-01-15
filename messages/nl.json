@@ -1,6 +1,8 @@
 {
-    "HomePage": {
-      "title": "Hallo werld!",
-      "about": "Go to the about page"
-    }
+  "hero": {
+    "heading": "Hallo werld!",
+    "subtext": "Lekker dan",
+    "button": "Klik hier!",
+    "partners": "Gaan met de banaan!"
   }
+}
