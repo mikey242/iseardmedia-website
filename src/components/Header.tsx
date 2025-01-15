@@ -13,6 +13,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import LanguageSwitcher from './LanguageSwitcher'
 
 function MobileNavLink({
   href,
@@ -98,6 +99,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
+            <LanguageSwitcher/>
             <Button href="#" color="blue">
               <span>
                 Get started <span className="hidden lg:inline">today</span>
