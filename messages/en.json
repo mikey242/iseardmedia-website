@@ -1,17 +1,19 @@
 {
     "header": {
-      "button": "Get in touch",
       "menu": {
         "services": "Services",
-        "projects": "Projects"
+        "projects": "Projects",
+        "about": "About"
       }
 
     },
     "hero": {
       "heading": "Your trusted partner in effective marketing",
       "subtext": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results. ",
-      "button": "Get in touch",
-      "partners": "We've worked with lots of amazing organisations"
+      "button": "Get in touch"
+    },
+    "partners": {
+      "heading": "We've worked with some amazing organisations"
     },
     "services": {
       "heading": "Services",
@@ -60,13 +62,9 @@
   "footer": {
     "menu": {
       "services": "Services",
-      "projects": "Projects"
+      "projects": "Projects",
+      "about": "About"
     },
-    "copyright": "Copyright 2025 Iseard Media. All rights reserved."
-  },
-  "about": {
-    "eyebrow": "",
-    "heading": "",
-    "subtext": ""
+    "copyright": "Copyright © 2025 Iseard Media. All rights reserved. Download our terms and conditions."
   }
 }

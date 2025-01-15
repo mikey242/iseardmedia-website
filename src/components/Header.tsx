@@ -15,6 +15,7 @@ import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import LanguageSwitcher from './LanguageSwitcher'
 import { useTranslations } from 'next-intl'
+import { Gradient } from './Gradient'
 
 function MobileNavLink({
   href,
@@ -77,6 +78,7 @@ function MobileNavigation() {
       >
         <MobileNavLink href="#services">{t('menu.services')}</MobileNavLink>
         <MobileNavLink href="#projects">{t('menu.projects')}</MobileNavLink>
+        <NavLink href="#about">{t('menu.about')}</NavLink>
       </PopoverPanel>
     </Popover>
   )
@@ -85,8 +87,8 @@ function MobileNavigation() {
 export function Header() {
   const t = useTranslations('header');
   return (
-    <header className="py-10">
-      <Container>
+    <header className="py-10 relative">
+      <Container className='relative'>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
@@ -95,15 +97,11 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#services">{t('menu.services')}</NavLink>
               <NavLink href="#projects">{t('menu.projects')}</NavLink>
+              <NavLink href="#about">{t('menu.about')}</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <LanguageSwitcher/>
-            <Button href="#" color="blue">
-              <span>
-                {t('button')}
-              </span>
-            </Button>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
