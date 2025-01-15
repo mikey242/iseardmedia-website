@@ -14,6 +14,7 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import LanguageSwitcher from './LanguageSwitcher'
+import { useTranslations } from 'next-intl'
 
 function MobileNavLink({
   href,
@@ -57,6 +58,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
 }
 
 function MobileNavigation() {
+  const t = useTranslations('header');
   return (
     <Popover>
       <PopoverButton
@@ -73,17 +75,15 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
       >
-        <MobileNavLink href="#features">Features</MobileNavLink>
-        <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-        <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-        <hr className="m-2 border-slate-300/40" />
-        <MobileNavLink href="/login">Sign in</MobileNavLink>
+        <MobileNavLink href="#services">{t('menu.services')}</MobileNavLink>
+        <MobileNavLink href="#projects">{t('menu.projects')}</MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
 }
 
 export function Header() {
+  const t = useTranslations('header');
   return (
     <header className="py-10">
       <Container>
@@ -93,16 +93,15 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#services">{t('menu.services')}</NavLink>
+              <NavLink href="#projects">{t('menu.projects')}</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <LanguageSwitcher/>
             <Button href="#" color="blue">
               <span>
-                Get started <span className="hidden lg:inline">today</span>
+                {t('button')}
               </span>
             </Button>
             <div className="-mr-1 md:hidden">
