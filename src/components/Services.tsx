@@ -1,151 +1,271 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
+import { useId } from 'react'
+import Image, { type ImageProps } from 'next/image'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotContacts from '@/images/screenshots/contacts.png'
+import screenshotInventory from '@/images/screenshots/inventory.png'
+import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
 import { useTranslations } from 'next-intl'
+import { Heading, Lead, Paragraph, Subheading } from './Text'
+
+interface Project {
+  name: React.ReactNode
+  summary: string
+  description: string
+  image: ImageProps['src']
+  icon: React.ComponentType
+}
+
+type Props = {
+  features: Array<Project>
+}
+
+function Service({
+  feature,
+  isActive,
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<'div'> & {
+  feature: Project
+  isActive: boolean
+}) {
+  return (
+    <div
+      className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
+      {...props}
+    >
+      <div
+        className={clsx(
+          'w-9 rounded-lg',
+          isActive ? 'bg-primary' : 'bg-slate-500',
+        )}
+      >
+        <svg aria-hidden="true" className="h-9 w-9" fill="none">
+          <feature.icon />
+        </svg>
+      </div>
+      <h3
+        className={clsx(
+          'mt-6 text-sm font-semibold',
+          isActive ? 'text-primary' : 'text-gray-400',
+        )}
+      >
+        {feature.name}
+      </h3>
+      <p className="mt-2 font-medium text-xl text-white">
+        {feature.summary}
+      </p>
+      <p className="mt-4 text-sm text-white">{feature.description}</p>
+    </div>
+  )
+}
+
+function ServicesMobile({features}: Props) {
+  return (
+    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
+      {features.map((feature) => (
+        <div key={feature.summary}>
+          <Service feature={feature} className="mx-auto max-w-2xl" isActive />
+          <div className="relative mt-10 pb-10">
+            <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-800 ring-1 ring-white/15 sm:-inset-x-6" />
+            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+              <Image
+                className="w-full"
+                src={feature.image}
+                alt=""
+                sizes="52.75rem"
+              />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function ServicesDesktop({features}: Props) {
+  return (
+    <TabGroup className="hidden lg:mt-20 lg:block">
+      {({ selectedIndex }) => (
+        <>
+          <TabList className="grid grid-cols-4 gap-x-8">
+            {features.map((feature, featureIndex) => (
+              <Service
+                key={feature.summary}
+                feature={{
+                  ...feature,
+                  name: (
+                    <Tab className="ui-not-focus-visible:outline-none">
+                      <span className="absolute inset-0" />
+                      {feature.name}
+                    </Tab>
+                  ),
+                }}
+                isActive={featureIndex === selectedIndex}
+                className="relative"
+              />
+            ))}
+          </TabList>
+          <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-gray-800 ring-1 ring-white/15 px-14 py-16 xl:px-16">
+            <div className="-mx-5 flex">
+              {features.map((feature, featureIndex) => (
+                <TabPanel
+                  static
+                  key={feature.summary}
+                  className={clsx(
+                    'px-5 transition duration-500 ease-in-out ui-not-focus-visible:outline-none',
+                    featureIndex !== selectedIndex && 'opacity-60',
+                  )}
+                  style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
+                  aria-hidden={featureIndex !== selectedIndex}
+                >
+                  <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+                    <Image
+                      className="w-full"
+                      src={feature.image}
+                      alt=""
+                      sizes="52.75rem"
+                    />
+                  </div>
+                </TabPanel>
+              ))}
+            </div>
+            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
+          </TabPanels>
+        </>
+      )}
+    </TabGroup>
+  )
+}
 
 export function Services() {
-  
   const t = useTranslations('services');
 
-  const features = [
+  const features: Array<Project> = [
     {
-      title: t('first.title'),
-      description:
-      t('first.description'),
-      image: screenshotPayroll,
+      name: t('first.name'),
+      summary: t('first.summary'),
+      description: t('first.description'),
+      image: screenshotProfitLoss,
+      icon: function ReportingIcon() {
+        let id = useId()
+        return (
+          <>
+            <defs>
+              <linearGradient
+                id={id}
+                x1="11.5"
+                y1={18}
+                x2={36}
+                y2="15.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset=".194" stopColor="#fff" />
+                <stop offset={1} stopColor="#6692F1" />
+              </linearGradient>
+            </defs>
+            <path
+              d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
+              stroke={`url(#${id})`}
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </>
+        )
+      },
     },
     {
-      title: t('second.title'),
-      description:
-      t('second.description'),
-      image: screenshotExpenses,
+      name: t('second.name'),
+      summary: t('second.summary'),
+      description: t('second.description'),
+      image: screenshotInventory,
+      icon: function InventoryIcon() {
+        return (
+          <>
+            <path
+              opacity=".5"
+              d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
+              fill="#fff"
+            />
+            <path
+              opacity=".3"
+              d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
+              fill="#fff"
+            />
+            <path
+              d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
+              fill="#fff"
+            />
+          </>
+        )
+      },
     },
     {
-      title: t('third.title'),
-      description:
-      t('third.description'),
-      image: screenshotVatReturns,
+      name: t('third.name'),
+      summary: t('third.summary'),
+      description: t('third.description'),
+      image: screenshotContacts,
+      icon: function ContactsIcon() {
+        return (
+          <>
+            <path
+              opacity=".5"
+              d="M25.778 25.778c.39.39 1.027.393 1.384-.028A11.952 11.952 0 0 0 30 18c0-6.627-5.373-12-12-12S6 11.373 6 18c0 2.954 1.067 5.659 2.838 7.75.357.421.993.419 1.384.028.39-.39.386-1.02.036-1.448A9.959 9.959 0 0 1 8 18c0-5.523 4.477-10 10-10s10 4.477 10 10a9.959 9.959 0 0 1-2.258 6.33c-.35.427-.354 1.058.036 1.448Z"
+              fill="#fff"
+            />
+            <path
+              d="M12 28.395V28a6 6 0 0 1 12 0v.395A11.945 11.945 0 0 1 18 30c-2.186 0-4.235-.584-6-1.605ZM21 16.5c0-1.933-.5-3.5-3-3.5s-3 1.567-3 3.5 1.343 3.5 3 3.5 3-1.567 3-3.5Z"
+              fill="#fff"
+            />
+          </>
+        )
+      },
     },
     {
-      title: t('fourth.title'),
-      description:
-      t('fourth.description'),
-      image: screenshotReporting,
+      name: t('fourth.name'),
+      summary: t('fourth.summary'),
+      description: t('fourth.description'),
+      image: screenshotContacts,
+      icon: function ContactsIcon() {
+        return (
+          <>
+            <path
+              opacity=".5"
+              d="M25.778 25.778c.39.39 1.027.393 1.384-.028A11.952 11.952 0 0 0 30 18c0-6.627-5.373-12-12-12S6 11.373 6 18c0 2.954 1.067 5.659 2.838 7.75.357.421.993.419 1.384.028.39-.39.386-1.02.036-1.448A9.959 9.959 0 0 1 8 18c0-5.523 4.477-10 10-10s10 4.477 10 10a9.959 9.959 0 0 1-2.258 6.33c-.35.427-.354 1.058.036 1.448Z"
+              fill="#fff"
+            />
+            <path
+              d="M12 28.395V28a6 6 0 0 1 12 0v.395A11.945 11.945 0 0 1 18 30c-2.186 0-4.235-.584-6-1.605ZM21 16.5c0-1.933-.5-3.5-3-3.5s-3 1.567-3 3.5 1.343 3.5 3 3.5 3-1.567 3-3.5Z"
+              fill="#fff"
+            />
+          </>
+        )
+      },
     },
   ]
-
-  let [tabOrientation, setTabOrientation] = useState<'horizontal' | 'vertical'>(
-    'horizontal',
-  )
-
-  useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
-
-    function onMediaQueryChange({ matches }: { matches: boolean }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
-    }
-
-    onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
-
-    return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
-    }
-  }, [])
 
   return (
     <section
       id="services"
-      aria-label="Features for running your books"
-      className="relative overflow-hidden mx-2 mt-2 rounded-4xl bg-gray-900 py-32"
+      aria-label="Features for simplifying everyday business tasks"
+      className="bg-gray-900 rounded-4xl mx-2 mt-2 py-32"
     >
-      <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            {t('heading')}
-          </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
-            {t('subtext')}
-          </p>
+      <Container>
+        <div className="mx-auto max-w-2xl md:text-center">
+        <Heading as="h2" dark>
+          {t('heading')}
+        </Heading>
+        <Paragraph dark>
+            {t('subtitle')}
+        </Paragraph>
         </div>
-        <TabGroup
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
-          vertical={tabOrientation === 'vertical'}
-        >
-          {({ selectedIndex }) => (
-            <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <TabList className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
-                  {features.map((feature, featureIndex) => (
-                    <div
-                      key={feature.title}
-                      className={clsx(
-                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
-                        selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5',
-                      )}
-                    >
-                      <h3>
-                        <Tab
-                          className={clsx(
-                            'font-display text-lg ui-not-focus-visible:outline-none',
-                            selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white',
-                          )}
-                        >
-                          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
-                          {feature.title}
-                        </Tab>
-                      </h3>
-                      <p
-                        className={clsx(
-                          'mt-2 hidden text-sm lg:block',
-                          selectedIndex === featureIndex
-                            ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white',
-                        )}
-                      >
-                        {feature.description}
-                      </p>
-                    </div>
-                  ))}
-                </TabList>
-              </div>
-              <TabPanels className="lg:col-span-7">
-                {features.map((feature) => (
-                  <TabPanel key={feature.title} unmount={false}>
-                    <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
-                        {feature.description}
-                      </p>
-                    </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                      />
-                    </div>
-                  </TabPanel>
-                ))}
-              </TabPanels>
-            </>
-          )}
-        </TabGroup>
+        <ServicesMobile features={features}/>
+        <ServicesDesktop features={features} />
       </Container>
     </section>
   )

@@ -2,6 +2,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import {useTranslations} from 'next-intl';
 import { Gradient } from './Gradient'
+import { Paragraph } from './Text';
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -12,9 +13,9 @@ export function Hero() {
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         {t('heading')}
       </h1>
-      <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        {t('subtext')}
-      </p>
+      <Paragraph className="mx-auto mt-6 max-w-2xl font-normal">
+        {t('subtitle')}
+      </Paragraph>
       <div className="mt-10">
         <Button className="text-xl" href="#">{t('button')}</Button>
       </div>

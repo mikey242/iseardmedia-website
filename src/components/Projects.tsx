@@ -1,250 +1,240 @@
 'use client'
 
-import { useId } from 'react'
-import Image, { type ImageProps } from 'next/image'
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
-import clsx from 'clsx'
-
+import * as Headless from '@headlessui/react'
+import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
+import { clsx } from 'clsx'
+import {
+  MotionValue,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+  type HTMLMotionProps,
+} from 'framer-motion'
+import { useCallback, useLayoutEffect, useRef, useState } from 'react'
+import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import { Heading, Paragraph, Subheading } from '@/components/Text'
+import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
-interface Project {
-  name: React.ReactNode
-  summary: string
-  description: string
-  image: ImageProps['src']
-  icon: React.ComponentType
-}
-
-type Props = {
-  features: Array<Project>
-}
-
-function Project({
-  feature,
-  isActive,
-  className,
+function ProjectCard({
+  name,
+  type,
+  img,
+  children,
+  bounds,
+  scrollX,
   ...props
-}: React.ComponentPropsWithoutRef<'div'> & {
-  feature: Project
-  isActive: boolean
-}) {
+}: {
+  img: string
+  name: string
+  type: string
+  children: React.ReactNode
+  bounds: RectReadOnly
+  scrollX: MotionValue<number>
+} & HTMLMotionProps<'div'>) {
+  let ref = useRef<HTMLDivElement | null>(null)
+
+  let computeOpacity = useCallback(() => {
+    let element = ref.current
+    if (!element || bounds.width === 0) return 1
+
+    let rect = element.getBoundingClientRect()
+
+    if (rect.left < bounds.left) {
+      let diff = bounds.left - rect.left
+      let percent = diff / rect.width
+      return Math.max(0.5, 1 - percent)
+    } else if (rect.right > bounds.right) {
+      let diff = rect.right - bounds.right
+      let percent = diff / rect.width
+      return Math.max(0.5, 1 - percent)
+    } else {
+      return 1
+    }
+  }, [ref, bounds.width, bounds.left, bounds.right])
+
+  let opacity = useSpring(computeOpacity(), {
+    stiffness: 154,
+    damping: 23,
+  })
+
+  useLayoutEffect(() => {
+    opacity.set(computeOpacity())
+  }, [computeOpacity, opacity])
+
+  useMotionValueEvent(scrollX, 'change', () => {
+    opacity.set(computeOpacity())
+  })
+
   return (
-    <div
-      className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
+    <motion.div
+      ref={ref}
+      style={{ opacity }}
       {...props}
+      className="relative flex aspect-[9/16] w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[3/4] sm:w-96"
     >
+      <Image
+        alt=""
+        src={img}
+        className="absolute inset-x-0 top-0 aspect-square w-full object-cover"
+      />
       <div
-        className={clsx(
-          'w-9 rounded-lg',
-          isActive ? 'bg-blue-600' : 'bg-slate-500',
-        )}
-      >
-        <svg aria-hidden="true" className="h-9 w-9" fill="none">
-          <feature.icon />
-        </svg>
-      </div>
-      <h3
-        className={clsx(
-          'mt-6 text-sm font-medium',
-          isActive ? 'text-blue-600' : 'text-slate-600',
-        )}
-      >
-        {feature.name}
-      </h3>
-      <p className="mt-2 font-display text-xl text-slate-900">
-        {feature.summary}
+        aria-hidden="true"
+        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] ring-1 ring-inset ring-gray-950/10 sm:from-25%"
+      />
+      <figure className="relative p-10">
+        <p className="relative text-xl/7 text-white">
+          {children}
+        </p>
+        <figcaption className="mt-6 border-t border-white/20 pt-6">
+          <p className="text-sm/6 font-medium text-white">{name}</p>
+          <p className="text-sm/6 font-medium">
+            <span className="bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text text-transparent">
+              {type}
+            </span>
+          </p>
+        </figcaption>
+      </figure>
+    </motion.div>
+  )
+}
+
+function CallToAction() {
+  return (
+    <div>
+      <p className="max-w-sm text-sm/6 text-gray-600">
+        Join the best sellers in the business and start using Radiant to hit
+        your targets today.
       </p>
-      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
+      <div className="mt-2">
+        <Link
+          href="#"
+          className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
+        >
+          Get started
+          <ArrowLongRightIcon className="size-5" />
+        </Link>
+      </div>
     </div>
-  )
-}
-
-function ProjectsMobile({features}: Props) {
-  return (
-    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-      {features.map((feature) => (
-        <div key={feature.summary}>
-          <Project feature={feature} className="mx-auto max-w-2xl" isActive />
-          <div className="relative mt-10 pb-10">
-            <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-              <Image
-                className="w-full"
-                src={feature.image}
-                alt=""
-                sizes="52.75rem"
-              />
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function ProjectsDesktop({features}: Props) {
-  return (
-    <TabGroup className="hidden lg:mt-20 lg:block">
-      {({ selectedIndex }) => (
-        <>
-          <TabList className="grid grid-cols-3 gap-x-8">
-            {features.map((feature, featureIndex) => (
-              <Project
-                key={feature.summary}
-                feature={{
-                  ...feature,
-                  name: (
-                    <Tab className="ui-not-focus-visible:outline-none">
-                      <span className="absolute inset-0" />
-                      {feature.name}
-                    </Tab>
-                  ),
-                }}
-                isActive={featureIndex === selectedIndex}
-                className="relative"
-              />
-            ))}
-          </TabList>
-          <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
-            <div className="-mx-5 flex">
-              {features.map((feature, featureIndex) => (
-                <TabPanel
-                  static
-                  key={feature.summary}
-                  className={clsx(
-                    'px-5 transition duration-500 ease-in-out ui-not-focus-visible:outline-none',
-                    featureIndex !== selectedIndex && 'opacity-60',
-                  )}
-                  style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
-                  aria-hidden={featureIndex !== selectedIndex}
-                >
-                  <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-                    <Image
-                      className="w-full"
-                      src={feature.image}
-                      alt=""
-                      sizes="52.75rem"
-                    />
-                  </div>
-                </TabPanel>
-              ))}
-            </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
-          </TabPanels>
-        </>
-      )}
-    </TabGroup>
   )
 }
 
 export function Projects() {
-  const t = useTranslations('projects');
+  let scrollRef = useRef<HTMLDivElement | null>(null)
+  let { scrollX } = useScroll({ container: scrollRef })
+  let [setReferenceWindowRef, bounds] = useMeasure()
+  let [activeIndex, setActiveIndex] = useState(0)
+  const t = useTranslations("projects")
 
-  const features: Array<Project> = [
+  useMotionValueEvent(scrollX, 'change', (x) => {
+    setActiveIndex(Math.floor(x / scrollRef.current!.children[0].clientWidth))
+  })
+
+  function scrollTo(index: number) {
+    let gap = 32
+    let width = (scrollRef.current!.children[0] as HTMLElement).offsetWidth
+    scrollRef.current!.scrollTo({ left: (width + gap) * index })
+  }
+
+
+  const projects = [
     {
+      img: '',
       name: t('first.name'),
-      summary: t('first.summary'),
-      description: t('first.description'),
-      image: screenshotProfitLoss,
-      icon: function ReportingIcon() {
-        let id = useId()
-        return (
-          <>
-            <defs>
-              <linearGradient
-                id={id}
-                x1="11.5"
-                y1={18}
-                x2={36}
-                y2="15.5"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset=".194" stopColor="#fff" />
-                <stop offset={1} stopColor="#6692F1" />
-              </linearGradient>
-            </defs>
-            <path
-              d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
-              stroke={`url(#${id})`}
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </>
-        )
-      },
+      type: t('first.type'),
+      description:
+        t('first.description'),
     },
     {
+      img: '',
       name: t('second.name'),
-      summary: t('second.summary'),
-      description: t('second.description'),
-      image: screenshotInventory,
-      icon: function InventoryIcon() {
-        return (
-          <>
-            <path
-              opacity=".5"
-              d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-              fill="#fff"
-            />
-            <path
-              opacity=".3"
-              d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-              fill="#fff"
-            />
-            <path
-              d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z"
-              fill="#fff"
-            />
-          </>
-        )
-      },
+      type: t('second.type'),
+      description:
+        t('second.description'),
     },
     {
+      img: '',
       name: t('third.name'),
-      summary: t('third.summary'),
-      description: t('third.description'),
-      image: screenshotContacts,
-      icon: function ContactsIcon() {
-        return (
-          <>
-            <path
-              opacity=".5"
-              d="M25.778 25.778c.39.39 1.027.393 1.384-.028A11.952 11.952 0 0 0 30 18c0-6.627-5.373-12-12-12S6 11.373 6 18c0 2.954 1.067 5.659 2.838 7.75.357.421.993.419 1.384.028.39-.39.386-1.02.036-1.448A9.959 9.959 0 0 1 8 18c0-5.523 4.477-10 10-10s10 4.477 10 10a9.959 9.959 0 0 1-2.258 6.33c-.35.427-.354 1.058.036 1.448Z"
-              fill="#fff"
-            />
-            <path
-              d="M12 28.395V28a6 6 0 0 1 12 0v.395A11.945 11.945 0 0 1 18 30c-2.186 0-4.235-.584-6-1.605ZM21 16.5c0-1.933-.5-3.5-3-3.5s-3 1.567-3 3.5 1.343 3.5 3 3.5 3-1.567 3-3.5Z"
-              fill="#fff"
-            />
-          </>
-        )
-      },
+      type: t('third.type'),
+      description:
+        t('third.description'),
+    },
+    {
+      img: '',
+      name: t('fourth.name'),
+      type: t('fourth.type'),
+      description:
+        t('fourth.description'),
+    },
+    {
+      img: '',
+      name: t('fifth.name'),
+      type: t('fifth.type'),
+      description:
+        t('fifth.description'),
     },
   ]
 
   return (
-    <section
-      id="projects"
-      aria-label="Features for simplifying everyday business tasks"
-      className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
-    >
+    <div className="overflow-hidden py-32">
       <Container>
-        <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+        <div ref={setReferenceWindowRef} className="mx-auto md:text-center" >
+          <Heading as="h2" className="mt-2">
             {t('heading')}
-          </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            {t('subtitle')}
-          </p>
+          </Heading>
+          <Paragraph>
+            {t("subtitle")}
+          </Paragraph>
         </div>
-        <ProjectsMobile features={features}/>
-        <ProjectsDesktop features={features} />
       </Container>
-    </section>
+      <div
+        ref={scrollRef}
+        className={clsx([
+          'mt-16 flex gap-8 px-[var(--scroll-padding)]',
+          '[scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
+          'snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth',
+          '[--scroll-padding:max(theme(spacing.6),calc((100vw-theme(maxWidth.2xl))/2))] lg:[--scroll-padding:max(theme(spacing.8),calc((100vw-theme(maxWidth.7xl))/2))]',
+        ])}
+      >
+        {projects.map(({ img, name, type, description }, projectIndex) => (
+          <ProjectCard
+            key={projectIndex}
+            name={name}
+            type={type}
+            img={img}
+            bounds={bounds}
+            scrollX={scrollX}
+            onClick={() => scrollTo(projectIndex)}
+          >
+            {description}
+          </ProjectCard>
+        ))}
+        <div className="w-[42rem] shrink-0 sm:w-[54rem]" />
+      </div>
+      <Container className="mt-16">
+        <div className="flex justify-end">
+          <div className="hidden sm:flex sm:gap-2">
+            {projects.map(({ name }, projectIndex) => (
+              <Headless.Button
+                key={projectIndex}
+                onClick={() => scrollTo(projectIndex)}
+                data-active={
+                  activeIndex === projectIndex ? true : undefined
+                }
+                aria-label={`Scroll to testimonial from ${name}`}
+                className={clsx(
+                  'size-2.5 rounded-full border border-transparent bg-gray-300 transition',
+                  'data-[active]:bg-gray-400 data-[hover]:bg-gray-400',
+                  'forced-colors:data-[active]:bg-[Highlight] forced-colors:data-[focus]:outline-offset-4',
+                )}
+              />
+            ))}
+          </div>
+        </div>
+      </Container>
+    </div>
   )
 }

@@ -1,4 +1,4 @@
-import logo from '@/images/logo-cd.svg'
+import logo from '@/images/im-logo.svg'
 import Image from 'next/image'
 
 export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {

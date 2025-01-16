@@ -5,11 +5,10 @@
         "projects": "Projects",
         "about": "About"
       }
-
     },
     "hero": {
       "heading": "Your trusted partner in effective marketing",
-      "subtext": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results. ",
+      "subtitle": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results. ",
       "button": "Get in touch"
     },
     "partners": {
@@ -17,46 +16,60 @@
     },
     "services": {
       "heading": "Services",
-      "subtext": "Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact. We bring clarity and precision to your marketing through the following services.",
+      "subtitle": "Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact. We bring clarity and precision to your marketing through the following services.",
       "first": {
-        "title": "Campaign consultation",
+        "name": "Campaign consultation",
+        "summary": "Summary 1",
         "description": "We refine and optimise new and existing campaigns with expert consultation and strategic guidance."
       },
         "second": {
-        "title": "Landing pages",
+        "name": "Landing pages",
+        "summary": "Summary 2",
         "description": "We build high-performing landing pages tailored to your audience and goals, designed to convert."
       },
       "third": {
-        "title": "Dashboards & tracking",
+        "name": "Dashboards & tracking",
+        "summary": "Summary 3",
         "description": "We measure your goals effectively with tailored performance dashboards and precise tracking, turning your marketing data into actionable insights."
       },
       "fourth": {
-        "title": "Google Ads & Grants",
+        "name": "Google Ads & Grants",
+        "summary": "Summary 4",
         "description": "We offer the full suite of Google Ads services, including Search, Display, and YouTube campaigns, as well as specialised Grants management for non-profits."
       }
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Here are some of projects we're proud to have worked on (or still do!).",
+    "subtitle": "Here are some of projects we're proud to have worked on (or still do!)",
     "first": {
       "name": "Kudos Donations",
-      "summary": "A free, open-source donation plugin for non-profit WordPress websites.",
+      "type": "WordPress plugin",
       "description": "Used by hundreds of organisations, we developed Kudos especially for non-profits who are looking to raise donations through their own website."
     },
     "second": {
       "name": "Loosduinen Gaat Los",
-      "summary": "Bespoke cultural festival website with local marketing support",
+      "type": "Event landing-page",
       "description": "We built the website for this local arts & culture festival and support them every year with their marketing campaign. A true five days of fun."
     },
     "third": {
       "name": "Family walking trail",
-      "summary": "A web app with QR walking trail",
+      "type": "Interactive experience",
+      "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
+    },
+    "fourth": {
+      "name": "Word Warbler",
+      "type": "Game",
+      "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
+    },
+    "fifth": {
+      "name": "Word Warbler",
+      "type": "Game",
       "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
     }
   },
   "cta": {
     "heading": "Who we are",
-    "subtext": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
+    "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
     "button": "Get in touch"
   },
   "footer": {

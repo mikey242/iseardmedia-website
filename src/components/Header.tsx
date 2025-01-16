@@ -9,13 +9,11 @@ import {
 } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
-import LanguageSwitcher from './LanguageSwitcher'
 import { useTranslations } from 'next-intl'
-import { Gradient } from './Gradient'
+import LocaleSwitcher from './LocaleSwitcher'
 
 function MobileNavLink({
   href,
@@ -101,7 +99,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <LanguageSwitcher/>
+            <LocaleSwitcher/>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
