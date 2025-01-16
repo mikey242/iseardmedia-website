@@ -78,7 +78,7 @@ function MobileNavigation() {
       >
         <MobileNavLink href="#services">{t('menu.services')}</MobileNavLink>
         <MobileNavLink href="#projects">{t('menu.projects')}</MobileNavLink>
-        <NavLink href="#about">{t('menu.about')}</NavLink>
+        <MobileNavLink href="#about">{t('menu.about')}</MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
