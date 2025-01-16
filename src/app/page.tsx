@@ -8,7 +8,7 @@ import { Services } from '@/components/Services'
 
 export default function Home() {
   return (
-    <div className="selection:bg-primary">
+    <div className="selection:bg-primary selection:text-white">
       <Header />
       <main>
         <Hero />
