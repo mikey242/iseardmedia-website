@@ -18,6 +18,11 @@ import { Heading, Paragraph, Subheading } from '@/components/Text'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import screenshotKudos from "@/images/screenshots/projects/kudos.png"
+import screenshotLGL from "@/images/screenshots/projects/lgl.png"
+import screenshotDickens from "@/images/screenshots/projects/charles-dickens.png"
+import screenshotBBOWT from "@/images/screenshots/projects/bbowt.png"
+import screenshotWordWarbler from "@/images/screenshots/projects/word-warbler.png"
 
 function ProjectCard({
   name,
@@ -142,35 +147,35 @@ export function Projects() {
 
   const projects = [
     {
-      img: '',
+      img: screenshotKudos,
       name: t('first.name'),
       type: t('first.type'),
       description:
         t('first.description'),
     },
     {
-      img: '',
+      img: screenshotLGL,
       name: t('second.name'),
       type: t('second.type'),
       description:
         t('second.description'),
     },
     {
-      img: '',
+      img: screenshotBBOWT,
       name: t('third.name'),
       type: t('third.type'),
       description:
         t('third.description'),
     },
     {
-      img: '',
+      img: screenshotWordWarbler,
       name: t('fourth.name'),
       type: t('fourth.type'),
       description:
         t('fourth.description'),
     },
     {
-      img: '',
+      img: screenshotDickens,
       name: t('fifth.name'),
       type: t('fifth.type'),
       description:
@@ -179,7 +184,7 @@ export function Projects() {
   ]
 
   return (
-    <div className="overflow-hidden py-32">
+    <section id="projects" className="overflow-hidden py-32">
       <Container>
         <div ref={setReferenceWindowRef} className="mx-auto md:text-center" >
           <Heading as="h2" className="mt-2">
@@ -235,6 +240,6 @@ export function Projects() {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }
