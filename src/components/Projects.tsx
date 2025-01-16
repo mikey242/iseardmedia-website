@@ -1,7 +1,6 @@
 'use client'
 
 import * as Headless from '@headlessui/react'
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
 import {
   MotionValue,
@@ -11,12 +10,11 @@ import {
   useSpring,
   type HTMLMotionProps,
 } from 'framer-motion'
-import { useCallback, useLayoutEffect, useRef, useState } from 'react'
+import React, { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from '@/components/Container'
-import { Heading, Paragraph, Subheading } from '@/components/Text'
-import Link from 'next/link'
-import Image from 'next/image'
+import { Heading, Paragraph } from '@/components/Text'
+import Image, {StaticImageData} from "next/image";
 import { useTranslations } from 'next-intl'
 import screenshotKudos from "@/images/screenshots/projects/kudos.png"
 import screenshotLGL from "@/images/screenshots/projects/lgl.png"
@@ -33,7 +31,7 @@ function ProjectCard({
   scrollX,
   ...props
 }: {
-  img: string
+  img: StaticImageData | string
   name: string
   type: string
   children: React.ReactNode
@@ -76,7 +74,8 @@ function ProjectCard({
 
   return (
     <motion.div
-      ref={ref}
+      // @ts-ignore
+      ref={ref as React.Ref<HTMLDivElement>}
       style={{ opacity }}
       {...props}
       className="relative flex aspect-[9/16] w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[3/4] sm:w-96"
@@ -104,26 +103,6 @@ function ProjectCard({
         </figcaption>
       </figure>
     </motion.div>
-  )
-}
-
-function CallToAction() {
-  return (
-    <div>
-      <p className="max-w-sm text-sm/6 text-gray-600">
-        Join the best sellers in the business and start using Radiant to hit
-        your targets today.
-      </p>
-      <div className="mt-2">
-        <Link
-          href="#"
-          className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
-        >
-          Get started
-          <ArrowLongRightIcon className="size-5" />
-        </Link>
-      </div>
-    </div>
   )
 }
 
