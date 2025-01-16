@@ -1,10 +1,11 @@
 import { type Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
-import {NextIntlClientProvider} from 'next-intl'
-import {getLocale, getMessages} from 'next-intl/server'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getMessages } from 'next-intl/server'
 
 import '@/styles/tailwind.css'
+import React from 'react'
 
 export const metadata: Metadata = {
   title: {
@@ -32,9 +33,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
   const locale = await getLocale()
- 
+
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages()

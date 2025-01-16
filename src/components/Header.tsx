@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import {
   Popover,
-  PopoverButton,
   PopoverBackdrop,
+  PopoverButton,
   PopoverPanel,
 } from '@headlessui/react'
 import clsx from 'clsx'
@@ -14,6 +14,7 @@ import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import { useTranslations } from 'next-intl'
 import LocaleSwitcher from './LocaleSwitcher'
+import React from 'react'
 
 function MobileNavLink({
   href,
@@ -57,7 +58,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
 }
 
 function MobileNavigation() {
-  const t = useTranslations('header');
+  const t = useTranslations('header')
   return (
     <Popover>
       <PopoverButton
@@ -83,10 +84,10 @@ function MobileNavigation() {
 }
 
 export function Header() {
-  const t = useTranslations('header');
+  const t = useTranslations('header')
   return (
-    <header className="py-10 relative">
-      <Container className='relative'>
+    <header className="relative py-10">
+      <Container className="relative">
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
@@ -99,7 +100,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <LocaleSwitcher/>
+            <LocaleSwitcher />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

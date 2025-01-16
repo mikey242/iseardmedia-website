@@ -1,4 +1,5 @@
 import { clsx } from 'clsx'
+import React from 'react'
 
 type HeadingProps = {
   as?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
@@ -10,9 +11,7 @@ type HeadingProps = {
 type ParagraphProps = {
   as?: 'div' | 'p' | 'span'
   dark?: boolean
-} & React.ComponentPropsWithoutRef<
-  'div' | 'p' | 'span'
->
+} & React.ComponentPropsWithoutRef<'div' | 'p' | 'span'>
 
 export function Heading({
   className,
@@ -72,7 +71,10 @@ export function Paragraph({
     <Element
       {...props}
       data-dark={dark ? 'true' : undefined}
-      className={clsx(className, 'text-lg mt-4 tracking-tight font-medium text-slate-700 data-[dark]:text-white')}
+      className={clsx(
+        className,
+        'mt-4 text-lg font-medium tracking-tight text-slate-700 data-[dark]:text-white',
+      )}
     />
   )
 }

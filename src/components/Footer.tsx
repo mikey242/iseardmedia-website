@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl'
 
 export function Footer() {
-  const t = useTranslations('footer');
+  const t = useTranslations('footer')
   return (
     <footer className="bg-slate-50">
       <Container>
@@ -22,7 +22,11 @@ export function Footer() {
         </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
-            <Link href="https://github.com/mikey242/" className="group" aria-label="Iseard Media on GitHub">
+            <Link
+              href="https://github.com/mikey242/"
+              className="group"
+              aria-label="Iseard Media on GitHub"
+            >
               <svg
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
                 aria-hidden="true"

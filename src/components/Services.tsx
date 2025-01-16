@@ -1,6 +1,6 @@
 'use client'
 
-import { useId } from 'react'
+import React, { useId } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
@@ -10,7 +10,7 @@ import screenshotContacts from '@/images/screenshots/contacts.png'
 import screenshotInventory from '@/images/screenshots/inventory.png'
 import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
 import { useTranslations } from 'next-intl'
-import { Heading, Lead, Paragraph, Subheading } from './Text'
+import { Heading, Paragraph } from './Text'
 
 interface Project {
   name: React.ReactNode
@@ -56,15 +56,13 @@ function Service({
       >
         {feature.name}
       </h3>
-      <p className="mt-2 font-medium text-xl text-white">
-        {feature.summary}
-      </p>
+      <p className="mt-2 text-xl font-medium text-white">{feature.summary}</p>
       <p className="mt-4 text-sm text-white">{feature.description}</p>
     </div>
   )
 }
 
-function ServicesMobile({features}: Props) {
+function ServicesMobile({ features }: Props) {
   return (
     <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
       {features.map((feature) => (
@@ -87,7 +85,7 @@ function ServicesMobile({features}: Props) {
   )
 }
 
-function ServicesDesktop({features}: Props) {
+function ServicesDesktop({ features }: Props) {
   return (
     <TabGroup className="hidden lg:mt-20 lg:block">
       {({ selectedIndex }) => (
@@ -110,7 +108,7 @@ function ServicesDesktop({features}: Props) {
               />
             ))}
           </TabList>
-          <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-gray-800 ring-1 ring-white/15 px-14 py-16 xl:px-16">
+          <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-gray-800 px-14 py-16 ring-1 ring-white/15 xl:px-16">
             <div className="-mx-5 flex">
               {features.map((feature, featureIndex) => (
                 <TabPanel
@@ -143,7 +141,7 @@ function ServicesDesktop({features}: Props) {
 }
 
 export function Services() {
-  const t = useTranslations('services');
+  const t = useTranslations('services')
 
   const features: Array<Project> = [
     {
@@ -253,18 +251,16 @@ export function Services() {
     <section
       id="services"
       aria-label="Features for simplifying everyday business tasks"
-      className="bg-gray-900 rounded-4xl mx-2 mt-2 py-32"
+      className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
-        <Heading as="h2" dark>
-          {t('heading')}
-        </Heading>
-        <Paragraph dark>
-            {t('subtitle')}
-        </Paragraph>
+          <Heading as="h2" dark>
+            {t('heading')}
+          </Heading>
+          <Paragraph dark>{t('subtitle')}</Paragraph>
         </div>
-        <ServicesMobile features={features}/>
+        <ServicesMobile features={features} />
         <ServicesDesktop features={features} />
       </Container>
     </section>

@@ -1,42 +1,42 @@
 {
-    "header": {
-      "menu": {
-        "services": "Services",
-        "projects": "Projects",
-        "about": "About"
-      }
+  "header": {
+    "menu": {
+      "services": "Services",
+      "projects": "Projects",
+      "about": "About"
+    }
+  },
+  "hero": {
+    "heading": "Your trusted partner in effective marketing",
+    "subtitle": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results. ",
+    "button": "Get in touch"
+  },
+  "partners": {
+    "heading": "We've worked with some amazing organisations"
+  },
+  "services": {
+    "heading": "Services",
+    "subtitle": "Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact. We bring clarity and precision to your marketing through the following services.",
+    "first": {
+      "name": "Campaign consultation",
+      "summary": "Summary 1",
+      "description": "We refine and optimise new and existing campaigns with expert consultation and strategic guidance."
     },
-    "hero": {
-      "heading": "Your trusted partner in effective marketing",
-      "subtitle": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results. ",
-      "button": "Get in touch"
+    "second": {
+      "name": "Landing pages",
+      "summary": "Summary 2",
+      "description": "We build high-performing landing pages tailored to your audience and goals, designed to convert."
     },
-    "partners": {
-      "heading": "We've worked with some amazing organisations"
+    "third": {
+      "name": "Dashboards & tracking",
+      "summary": "Summary 3",
+      "description": "We measure your goals effectively with tailored performance dashboards and precise tracking, turning your marketing data into actionable insights."
     },
-    "services": {
-      "heading": "Services",
-      "subtitle": "Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact. We bring clarity and precision to your marketing through the following services.",
-      "first": {
-        "name": "Campaign consultation",
-        "summary": "Summary 1",
-        "description": "We refine and optimise new and existing campaigns with expert consultation and strategic guidance."
-      },
-        "second": {
-        "name": "Landing pages",
-        "summary": "Summary 2",
-        "description": "We build high-performing landing pages tailored to your audience and goals, designed to convert."
-      },
-      "third": {
-        "name": "Dashboards & tracking",
-        "summary": "Summary 3",
-        "description": "We measure your goals effectively with tailored performance dashboards and precise tracking, turning your marketing data into actionable insights."
-      },
-      "fourth": {
-        "name": "Google Ads & Grants",
-        "summary": "Summary 4",
-        "description": "We offer the full suite of Google Ads services, including Search, Display, and YouTube campaigns, as well as specialised Grants management for non-profits."
-      }
+    "fourth": {
+      "name": "Google Ads & Grants",
+      "summary": "Summary 4",
+      "description": "We offer the full suite of Google Ads services, including Search, Display, and YouTube campaigns, as well as specialised Grants management for non-profits."
+    }
   },
   "projects": {
     "heading": "Projects",

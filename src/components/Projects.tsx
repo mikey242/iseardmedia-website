@@ -3,24 +3,24 @@
 import * as Headless from '@headlessui/react'
 import { clsx } from 'clsx'
 import {
-  MotionValue,
+  type HTMLMotionProps,
   motion,
+  MotionValue,
   useMotionValueEvent,
   useScroll,
   useSpring,
-  type HTMLMotionProps,
 } from 'framer-motion'
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from '@/components/Container'
 import { Heading, Paragraph } from '@/components/Text'
-import Image, {StaticImageData} from "next/image";
+import Image, { StaticImageData } from 'next/image'
 import { useTranslations } from 'next-intl'
-import screenshotKudos from "@/images/screenshots/projects/kudos.png"
-import screenshotLGL from "@/images/screenshots/projects/lgl.png"
-import screenshotDickens from "@/images/screenshots/projects/charles-dickens.png"
-import screenshotBBOWT from "@/images/screenshots/projects/bbowt.png"
-import screenshotWordWarbler from "@/images/screenshots/projects/word-warbler.png"
+import screenshotKudos from '@/images/screenshots/projects/kudos.png'
+import screenshotLGL from '@/images/screenshots/projects/lgl.png'
+import screenshotDickens from '@/images/screenshots/projects/charles-dickens.png'
+import screenshotBBOWT from '@/images/screenshots/projects/bbowt.png'
+import screenshotWordWarbler from '@/images/screenshots/projects/word-warbler.png'
 
 function ProjectCard({
   name,
@@ -90,9 +90,7 @@ function ProjectCard({
         className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] ring-1 ring-inset ring-gray-950/10 sm:from-25%"
       />
       <figure className="relative p-10">
-        <p className="relative text-xl/7 text-white">
-          {children}
-        </p>
+        <p className="relative text-xl/7 text-white">{children}</p>
         <figcaption className="mt-6 border-t border-white/20 pt-6">
           <p className="text-sm/6 font-medium text-white">{name}</p>
           <p className="text-sm/6 font-medium">
@@ -111,7 +109,7 @@ export function Projects() {
   let { scrollX } = useScroll({ container: scrollRef })
   let [setReferenceWindowRef, bounds] = useMeasure()
   let [activeIndex, setActiveIndex] = useState(0)
-  const t = useTranslations("projects")
+  const t = useTranslations('projects')
 
   useMotionValueEvent(scrollX, 'change', (x) => {
     setActiveIndex(Math.floor(x / scrollRef.current!.children[0].clientWidth))
@@ -123,55 +121,47 @@ export function Projects() {
     scrollRef.current!.scrollTo({ left: (width + gap) * index })
   }
 
-
   const projects = [
     {
       img: screenshotKudos,
       name: t('first.name'),
       type: t('first.type'),
-      description:
-        t('first.description'),
+      description: t('first.description'),
     },
     {
       img: screenshotLGL,
       name: t('second.name'),
       type: t('second.type'),
-      description:
-        t('second.description'),
+      description: t('second.description'),
     },
     {
       img: screenshotBBOWT,
       name: t('third.name'),
       type: t('third.type'),
-      description:
-        t('third.description'),
+      description: t('third.description'),
     },
     {
       img: screenshotWordWarbler,
       name: t('fourth.name'),
       type: t('fourth.type'),
-      description:
-        t('fourth.description'),
+      description: t('fourth.description'),
     },
     {
       img: screenshotDickens,
       name: t('fifth.name'),
       type: t('fifth.type'),
-      description:
-        t('fifth.description'),
+      description: t('fifth.description'),
     },
   ]
 
   return (
     <section id="projects" className="overflow-hidden py-32">
       <Container>
-        <div ref={setReferenceWindowRef} className="mx-auto md:text-center" >
+        <div ref={setReferenceWindowRef} className="mx-auto md:text-center">
           <Heading as="h2" className="mt-2">
             {t('heading')}
           </Heading>
-          <Paragraph>
-            {t("subtitle")}
-          </Paragraph>
+          <Paragraph>{t('subtitle')}</Paragraph>
         </div>
       </Container>
       <div
@@ -205,9 +195,7 @@ export function Projects() {
               <Headless.Button
                 key={projectIndex}
                 onClick={() => scrollTo(projectIndex)}
-                data-active={
-                  activeIndex === projectIndex ? true : undefined
-                }
+                data-active={activeIndex === projectIndex ? true : undefined}
                 aria-label={`Scroll to testimonial from ${name}`}
                 className={clsx(
                   'size-2.5 rounded-full border border-transparent bg-gray-300 transition',
