@@ -30,6 +30,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "eslint-config-prettier": "^10.0.1",
