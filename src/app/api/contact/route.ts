@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const company = formData.get('company')
     const message = formData.get('message')
 
-    const result = transporter.sendMail({
+    const result = await transporter.sendMail({
       from: process.env.SMTP_FROM_EMAIL,
       to: process.env.SMTP_TO_EMAIL,
       replyTo: email,
