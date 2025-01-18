@@ -10,7 +10,7 @@ export function Gradient({
   let variant2 =
     'bg-[linear-gradient(115deg,var(--tw-gradient-stops))] from-[#FA8BFF] from-[0%] via-[#FF8E25] via-[50%] to-[#EFFFC8] to-[100%] sm:bg-[linear-gradient(45deg,var(--tw-gradient-stops))]'
 
-  return <div {...props} className={clsx(className, variant1)} />
+  return <div {...props} className={clsx(className, variant2)} />
 }
 
 export function GradientBackground() {
