@@ -8,7 +8,7 @@
   },
   "hero": {
     "heading": "Your trusted partner in effective marketing",
-    "subtitle": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results. ",
+    "subtitle": "We collaborate with organisations that strive to make a positive impact, from arts and education to environmental initiatives and public services. Through expect advice and technical solutions, we help create and optimise marketing campaigns aligned with your purpose.",
     "button": "Get in touch"
   },
   "partners": {
@@ -16,61 +16,72 @@
   },
   "services": {
     "heading": "Services",
-    "subtitle": "Our expert advice and technical solutions help you achieve measurable results, with services designed to enhance your campaigns, optimise performance, and deliver real impact. We bring clarity and precision to your marketing through the following services.",
+    "subtitle": "We bring clarity and impact to your marketing campaigns through the following services:",
     "first": {
-      "name": "Campaign consultation",
-      "summary": "Summary 1",
-      "description": "We refine and optimise new and existing campaigns with expert consultation and strategic guidance."
+      "name": "Strategy and planning",
+      "summary": "Setting the right goals",
+      "description": "We refine and optimise both new and existing campaigns with expert consultation and strategic guidance."
     },
     "second": {
-      "name": "Landing pages",
-      "summary": "Summary 2",
-      "description": "We build high-performing landing pages tailored to your audience and goals, designed to convert."
+      "name": "Campaign landing pages",
+      "summary": "Attractive design",
+      "description": "We create high-performing landing pages tailored to your audience and designed to convert."
     },
     "third": {
       "name": "Dashboards & tracking",
-      "summary": "Summary 3",
-      "description": "We measure your goals effectively with tailored performance dashboards and precise tracking, turning your marketing data into actionable insights."
+      "summary": "Let the data guide you",
+      "description": "We provide tailored performance dashboards and precise tracking to meaure your goals."
     },
     "fourth": {
       "name": "Google Ads & Grants",
-      "summary": "Summary 4",
-      "description": "We offer the full suite of Google Ads services, including Search, Display, and YouTube campaigns, as well as specialised Grants management for non-profits."
+      "summary": "Managing paid media",
+      "description": "We manage the full suite of Google Ads services and offer specialised Grants management for non-profits."
     }
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Here are some of projects we're proud to have worked on (or still do!)",
+    "subtitle": "Here are some of the projects we're proud to have worked on (or still do!)",
     "first": {
       "name": "Kudos Donations",
-      "type": "WordPress plugin",
-      "description": "Used by hundreds of organisations, we developed Kudos especially for non-profits who are looking to raise donations through their own website."
+      "type": "WordPress plugin for non-profits",
+      "description": "Used by hundreds of organisations, this plugin helps non-profits raise funds directly through their own website"
     },
     "second": {
       "name": "Loosduinen Gaat Los",
-      "type": "Event landing-page",
-      "description": "We built the website for this local arts & culture festival and support them every year with their marketing campaign. A true five days of fun."
+      "type": "Festival website and marketing",
+      "description": "We built the website for this arts and culture festival and continue to support their marketing activities every year"
     },
     "third": {
-      "name": "Family walking trail",
-      "type": "Interactive experience",
-      "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
+      "name": "BBOWT family walking trail",
+      "type": "Web app with QR walking guide",
+      "description": "We developed an interactive walking trail with sound and quizzes for the BBOWT"
     },
     "fourth": {
       "name": "Word Warbler",
-      "type": "Game",
-      "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
+      "type": "Interactive English word game",
+      "description": "This fun language game allows students to play and practice their vocabulary"
     },
     "fifth": {
-      "name": "Word Warbler",
-      "type": "Game",
-      "description": "For the The Berks, Bucks and Oxon Wildlife Trust we built their interactive walking trail app including sound and video. It's been active for years and still brings a smile to our face!"
+      "name": "Aan Tafel Met Charles Dickens",
+      "type": "A cookbook website",
+      "description": "We created this bespoke discovery landing page to celebrate their book and theatre release"
     }
   },
   "cta": {
     "heading": "Who we are",
     "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
     "button": "Get in touch"
+  },
+  "contact": {
+    "heading": "Contact",
+    "subtitle": "We'd love to hear from you",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    }
   },
   "footer": {
     "menu": {

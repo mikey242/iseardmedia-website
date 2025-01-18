@@ -72,6 +72,17 @@
     "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
     "button": "Get in touch"
   },
+  "contact": {
+    "heading": "Contact",
+    "subtitle": "We'd love to hear from you",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  },
   "footer": {
     "menu": {
       "services": "Services",
