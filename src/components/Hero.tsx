@@ -17,7 +17,7 @@ export function Hero() {
           {t('subtitle')}
         </Paragraph>
         <div className="mt-10">
-          <Button className="text-xl" href="#">
+          <Button className="text-xl" href="#contact">
             {t('button')}
           </Button>
         </div>

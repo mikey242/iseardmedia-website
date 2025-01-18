@@ -3,7 +3,8 @@
     "menu": {
       "services": "Services",
       "projects": "Projects",
-      "about": "About"
+      "about": "About",
+      "contact": "Contact"
     }
   },
   "hero": {
@@ -87,7 +88,8 @@
     "menu": {
       "services": "Services",
       "projects": "Projects",
-      "about": "About"
+      "about": "About",
+      "contact": "Contact"
     },
     "copyright": "Copyright © 2025 Iseard Media. All rights reserved. Download our terms and conditions."
   }

@@ -78,6 +78,7 @@ function MobileNavigation() {
         <MobileNavLink href="#services">{t('menu.services')}</MobileNavLink>
         <MobileNavLink href="#projects">{t('menu.projects')}</MobileNavLink>
         <MobileNavLink href="#about">{t('menu.about')}</MobileNavLink>
+        <MobileNavLink href="#contact">{t('menu.contact')}</MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
@@ -97,6 +98,7 @@ export function Header() {
               <NavLink href="#services">{t('menu.services')}</NavLink>
               <NavLink href="#projects">{t('menu.projects')}</NavLink>
               <NavLink href="#about">{t('menu.about')}</NavLink>
+              <NavLink href="#contact">{t('menu.contact')}</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">

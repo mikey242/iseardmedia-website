@@ -14,7 +14,7 @@ export function About() {
         <div className="mx-auto max-w-2xl text-center">
           <Heading dark>{t('heading')}</Heading>
           <Paragraph dark>{t('subtitle')}</Paragraph>
-          <Button href="#" color="white" className="mt-10 text-xl">
+          <Button href="#contact" color="white" className="mt-10 text-xl">
             {t('button')}
           </Button>
         </div>
