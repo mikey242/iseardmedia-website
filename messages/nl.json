@@ -1,94 +1,96 @@
 {
   "header": {
     "menu": {
-      "services": "Services",
-      "projects": "Projects",
-      "about": "About"
+      "services": "Diensten",
+      "projects": "Projecten",
+      "about": "Over ons",
+      "contact": "Contact"
     }
   },
   "hero": {
-    "heading": "Your trusted partner in effective marketing",
-    "subtitle": "We collaborate with organisations that strive to make a positive impact, from arts and education to environmental initiatives and public services. Through expect advice and technical solutions, we help create and optimise marketing campaigns aligned with your purpose.",
-    "button": "Get in touch"
+    "heading": "Jouw vertrouwde partner in effectieve marketing",
+    "subtitle": "We werken samen met organisaties die een positieve impact willen maken, van kunst en onderwijs tot milieuprojecten en publieke diensten. Met deskundig advies en technische oplossingen helpen we bij het creëren en optimaliseren van marketingcampagnes die passen bij jouw missie.",
+    "button": "Neem contact op"
   },
   "partners": {
-    "heading": "We've worked with some amazing organisations"
+    "heading": "We hebben samengewerkt met geweldige organisaties"
   },
   "services": {
-    "heading": "Services",
-    "subtitle": "We bring clarity and impact to your marketing campaigns through the following services:",
+    "heading": "Diensten",
+    "subtitle": "We brengen helderheid en impact in je marketingcampagnes via de volgende diensten:",
     "first": {
-      "name": "Strategy and planning",
-      "summary": "Setting the right goals",
-      "description": "We refine and optimise both new and existing campaigns with expert consultation and strategic guidance."
+      "name": "Strategie en planning",
+      "summary": "De juiste doelen stellen",
+      "description": "We verfijnen en optimaliseren nieuwe én bestaande campagnes met deskundig advies en strategische begeleiding."
     },
     "second": {
-      "name": "Campaign landing pages",
-      "summary": "Attractive design",
-      "description": "We create high-performing landing pages tailored to your audience and designed to convert."
+      "name": "Campagne-landingspagina's",
+      "summary": "Aantrekkelijk ontwerp",
+      "description": "We maken hoog presterende landingspagina's die aansluiten op je doelgroep en ontworpen zijn om te converteren."
     },
     "third": {
       "name": "Dashboards & tracking",
-      "summary": "Let the data guide you",
-      "description": "We provide tailored performance dashboards and precise tracking to meaure your goals."
+      "summary": "Laat je leiden door data",
+      "description": "We bieden op maat gemaakte performance dashboards en nauwkeurige tracking om je doelen te meten."
     },
     "fourth": {
       "name": "Google Ads & Grants",
-      "summary": "Managing paid media",
-      "description": "We manage the full suite of Google Ads services and offer specialised Grants management for non-profits."
+      "summary": "Betaalde media beheren",
+      "description": "We beheren alle Google Ads-diensten en bieden gespecialiseerde Grants-beheer voor non-profitorganisaties."
     }
   },
   "projects": {
-    "heading": "Projects",
-    "subtitle": "Here are some of the projects we're proud to have worked on (or still do!)",
+    "heading": "Projecten",
+    "subtitle": "Dit zijn enkele van de projecten waar we trots op zijn (en soms nog steeds aan werken!)",
     "first": {
       "name": "Kudos Donations",
-      "type": "WordPress plugin for non-profits",
-      "description": "Used by hundreds of organisations, this plugin helps non-profits raise funds directly through their own website"
+      "type": "WordPress-plugin voor non-profits",
+      "description": "Deze plugin wordt door honderden organisaties gebruikt om rechtstreeks via hun eigen website fondsen te werven."
     },
     "second": {
       "name": "Loosduinen Gaat Los",
-      "type": "Festival website and marketing",
-      "description": "We built the website for this arts and culture festival and continue to support their marketing activities every year"
+      "type": "Festivalwebsite en marketing",
+      "description": "We hebben de website gebouwd voor dit kunst- en cultuurfestival en ondersteunen jaarlijks hun marketingactiviteiten."
     },
     "third": {
-      "name": "BBOWT family walking trail",
-      "type": "Web app with QR walking guide",
-      "description": "We developed an interactive walking trail with sound and quizzes for the BBOWT"
+      "name": "BBOWT familie-wandelroute",
+      "type": "Webapp met QR-wandelgids",
+      "description": "We hebben een interactieve wandelroute ontwikkeld met geluid en quizzen voor de BBOWT."
     },
     "fourth": {
       "name": "Word Warbler",
-      "type": "Interactive English word game",
-      "description": "This fun language game allows students to play and practice their vocabulary"
+      "type": "Interactief Engels woordspel",
+      "description": "Dit leuke taalspel laat studenten spelen en hun woordenschat oefenen."
     },
     "fifth": {
       "name": "Aan Tafel Met Charles Dickens",
-      "type": "A cookbook website",
-      "description": "We created this bespoke discovery landing page to celebrate their book and theatre release"
+      "type": "Een kookboekwebsite",
+      "description": "We hebben deze op maat gemaakte landingspagina ontworpen om hun boek en theaterrelease te vieren."
     }
   },
   "cta": {
-    "heading": "Who we are",
-    "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
-    "button": "Get in touch"
+    "heading": "Wie wij zijn",
+    "subtitle": "Wij zijn een gespecialiseerde marketingagency gevestigd in Nederland, en werken samen met organisaties door heel Europa om zinvolle veranderingen te creëren via effectieve marketing. Met meer dan tien jaar ervaring in strategie, analytics en technische ontwikkeling helpen we onze klanten hun doelen te bereiken en een positieve impact te maken. Laten we praten over hoe we jouw campagnes kunnen ondersteunen.",
+    "button": "Neem contact op"
   },
   "contact": {
     "heading": "Contact",
-    "subtitle": "We'd love to hear from you",
+    "subtitle": "We horen graag van je",
     "form": {
-      "name": "Name",
-      "company": "Company",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Submit"
+      "name": "Naam",
+      "company": "Bedrijf",
+      "email": "E-mailadres",
+      "message": "Bericht",
+      "submit": "Versturen"
     }
   },
   "footer": {
     "menu": {
-      "services": "Services",
-      "projects": "Projects",
-      "about": "About"
+      "services": "Diensten",
+      "projects": "Projecten",
+      "about": "Over ons",
+      "contact": "Contact"
     },
-    "copyright": "Copyright © 2025 Iseard Media. All rights reserved. Download our terms and conditions."
+    "copyright": "Copyright © 2025 Iseard Media. Alle rechten voorbehouden. Download onze algemene voorwaarden."
   }
 }
