@@ -1,5 +1,4 @@
 import headlessuiPlugin from '@headlessui/tailwindcss'
-import formsPlugin from '@tailwindcss/forms'
 import { type Config } from 'tailwindcss'
 
 export default {
@@ -22,7 +21,7 @@ export default {
     },
     extend: {
       colors: {
-        'primary': '#ff9500'
+        primary: '#ff9500',
       },
       borderRadius: {
         '4xl': '2rem',
@@ -36,5 +35,5 @@ export default {
       },
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [headlessuiPlugin],
 } satisfies Config
