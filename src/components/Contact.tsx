@@ -38,7 +38,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <section
+      id="contact"
+      className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8"
+    >
       <div className="mx-auto max-w-2xl text-center">
         <Heading as="h2">{t('heading')}</Heading>
         <Paragraph>{t('subtitle')}</Paragraph>
