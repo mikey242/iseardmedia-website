@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     const company = formData.get('company')
     const message = formData.get('message')
     const token = formData.get('cf-turnstile-response') as string
-    const ip = headers().get('CF-Connecting-IP')
+    const ip = (await headers()).get('CF-Connecting-IP')
 
     // Create form data for Turnstile verification
     const verifyFormData = new FormData()
