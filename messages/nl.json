@@ -1,4 +1,11 @@
 {
+  "meta": {
+    "title": {
+      "template": "%s - Iseard Media",
+      "default": "Iseard Media - Jouw vertrouwde partner in effectieve marketing"
+    },
+    "description": "We werken samen met organisaties die een positieve impact willen maken, van kunst en onderwijs tot milieuprojecten en publieke diensten. Door deskundig advies en technische oplossingen te bieden, helpen we je om je marketingcampagnes te optimaliseren en meetbare resultaten te behalen."
+  },
   "header": {
     "menu": {
       "services": "Diensten",
@@ -9,7 +16,7 @@
   },
   "hero": {
     "heading": "Jouw vertrouwde partner in effectieve marketing",
-    "subtitle": "We werken samen met organisaties die een positieve impact willen maken, van kunst en onderwijs tot milieuprojecten en publieke diensten. Met deskundig advies en technische oplossingen helpen we bij het creëren en optimaliseren van marketingcampagnes die passen bij jouw missie.",
+    "subtitle": "We werken samen met organisaties die een positieve impact willen maken, van kunst en onderwijs tot milieuprojecten en publieke diensten. Met deskundig advies en technische oplossingen helpen we bij het creëren en optimaliseren van marketingcampagnes die aansluiten bij jouw missie.",
     "button": "Neem contact op"
   },
   "partners": {
@@ -36,7 +43,7 @@
     "fourth": {
       "name": "Google Ads & Grants",
       "summary": "Betaalde media beheren",
-      "description": "We beheren alle Google Ads-diensten en bieden gespecialiseerde Grants-beheer voor non-profitorganisaties."
+      "description": "We beheren alle Google Ads-diensten en bieden gespecialiseerd Grants-beheer voor non-profitorganisaties."
     }
   },
   "projects": {
@@ -68,7 +75,7 @@
       "description": "We hebben deze op maat gemaakte landingspagina ontworpen om hun boek en theaterrelease te vieren."
     }
   },
-  "cta": {
+  "about": {
     "heading": "Wie wij zijn",
     "subtitle": "Wij zijn een gespecialiseerde marketingagency gevestigd in Nederland, en werken samen met organisaties door heel Europa om zinvolle veranderingen te creëren via effectieve marketing. Met meer dan tien jaar ervaring in strategie, analytics en technische ontwikkeling helpen we onze klanten hun doelen te bereiken en een positieve impact te maken. Laten we praten over hoe we jouw campagnes kunnen ondersteunen.",
     "button": "Neem contact op"
@@ -82,7 +89,8 @@
       "email": "E-mailadres",
       "message": "Bericht",
       "submit": "Versturen"
-    }
+    },
+    "success": "Bericht succesvol verzonden"
   },
   "footer": {
     "menu": {

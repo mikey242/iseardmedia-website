@@ -1,4 +1,11 @@
 {
+  "meta": {
+    "title": {
+      "template": "%s - Iseard Media",
+      "default": "Iseard Media - Your trusted partner in effective marketing"
+    },
+    "description": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions, we help you optimise your marketing campaigns and achieve measurable results."
+  },
   "header": {
     "menu": {
       "services": "Services",
@@ -68,7 +75,7 @@
       "description": "We created this bespoke discovery landing page to celebrate their book and theatre release"
     }
   },
-  "cta": {
+  "about": {
     "heading": "Who we are",
     "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
     "button": "Get in touch"

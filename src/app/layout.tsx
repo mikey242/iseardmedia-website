@@ -2,18 +2,25 @@ import { type Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 import { NextIntlClientProvider } from 'next-intl'
-import { getLocale, getMessages } from 'next-intl/server'
+import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 
 import '@/styles/tailwind.css'
 import React from 'react'
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s - Iseard Media',
-    default: 'Iseard Media - Your trusted partner in effective marketing',
-  },
-  description:
-    'We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions we help you to optimise your marketing campaigns and achieve measurable results.',
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: 'meta' })
+
+  return {
+    title: {
+      template: t('title.template'),
+      default: t('title.default'),
+    },
+    description: t('description'),
+    openGraph: {
+      images: '/images/og.png',
+    },
+  }
 }
 
 const inter = Inter({

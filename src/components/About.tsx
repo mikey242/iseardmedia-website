@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Heading, Paragraph } from './Text'
 
 export function About() {
-  const t = useTranslations('cta')
+  const t = useTranslations('about')
   return (
     <section
       id="about"
