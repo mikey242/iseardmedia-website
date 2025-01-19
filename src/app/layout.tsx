@@ -12,6 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' })
 
   return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+    ),
     title: {
       template: t('title.template'),
       default: t('title.default'),
