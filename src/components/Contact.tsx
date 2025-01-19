@@ -5,6 +5,7 @@ import { Button } from '@/components/Button'
 import React, { useState } from 'react'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
+import Script from 'next/script'
 
 export default function Contact() {
   const t = useTranslations('contact')
@@ -130,12 +131,25 @@ export default function Contact() {
                 </div>
               </div>
             </div>
+            <Script
+              src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+              async
+              defer
+            ></Script>
+            <div
+              suppressHydrationWarning
+              className="cf-turnstile mt-8"
+              // data-appearance="interaction-only"
+              data-sitekey={process.env.TURNSTILE_SITE_KEY}
+              data-callback="javascriptCallback"
+              data-size="flexible"
+            ></div>
             <div className="mt-10">
               <Button className="w-full text-xl">{t('form.submit')}</Button>
             </div>
             {message && (
               <div>
-                <Paragraph className="text-red-600">{message}</Paragraph>
+                <Paragraph className="text-red-500">{message}</Paragraph>
               </div>
             )}
           </form>

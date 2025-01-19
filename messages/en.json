@@ -82,7 +82,8 @@
       "email": "Email",
       "message": "Message",
       "submit": "Submit"
-    }
+    },
+    "success": "Message send successfully"
   },
   "footer": {
     "menu": {
