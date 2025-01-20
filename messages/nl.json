@@ -100,5 +100,10 @@
       "contact": "Contact"
     },
     "copyright": "Copyright © 2025 Iseard Media. Alle rechten voorbehouden. Download onze algemene voorwaarden."
+  },
+  "notfound": {
+    "title": "Pagina niet gevonden",
+    "description": "Sorry, we konden de pagina die je zocht niet vinden.",
+    "button": "Ga terug naar home"
   }
 }

@@ -3,7 +3,6 @@ import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
-
 import '@/styles/tailwind.css'
 import React from 'react'
 
@@ -38,13 +37,13 @@ const lexend = Lexend({
   variable: '--font-lexend',
 })
 
-export default async function RootLayout({
+export default async function BaseLayout({
   children,
+  locale,
 }: {
   children: React.ReactNode
+  locale: string
 }) {
-  const locale = await getLocale()
-
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages()

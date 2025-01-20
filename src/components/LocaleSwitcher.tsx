@@ -1,9 +1,8 @@
 'use client'
 
-import { CheckIcon, LanguageIcon } from '@heroicons/react/24/solid'
+import { CheckIcon } from '@heroicons/react/24/solid'
 import { useTransition } from 'react'
 import { Locale } from '@/i18n/config'
-import { setUserLocale } from '@/services/locale'
 import {
   Listbox,
   ListboxButton,
@@ -12,10 +11,13 @@ import {
 } from '@headlessui/react'
 import clsx from 'clsx'
 import { useLocale } from 'next-intl'
+import { usePathname, useRouter } from '@/i18n/routing'
+import { useParams } from 'next/navigation'
+import '../../node_modules/flag-icons/css/flag-icons.min.css'
 
 type Props = {
   defaultValue: string
-  items: Array<{ value: string; label: string }>
+  items: Array<{ value: string; label: string; class: string }>
 }
 
 export default function LocaleSwitcher() {
@@ -28,10 +30,12 @@ export default function LocaleSwitcher() {
         {
           value: 'en',
           label: 'English',
+          class: 'fi-gb',
         },
         {
           value: 'nl',
           label: 'Nederlands',
+          class: 'fi-nl',
         },
       ]}
     />
@@ -39,13 +43,22 @@ export default function LocaleSwitcher() {
 }
 
 export function LocaleSwitcherSelect({ defaultValue, items }: Props) {
+  const router = useRouter()
+  const pathname = usePathname()
+  const params = useParams()
   const [isPending, startTransition] = useTransition()
 
   function onChange(value: string) {
     console.log(value)
     const locale = value as Locale
     startTransition(() => {
-      void setUserLocale(locale)
+      router.replace(
+        // @ts-expect-error -- TypeScript will validate that only known `params`
+        // are used in combination with a given `pathname`. Since the two will
+        // always match for the current route, we can skip runtime checks.
+        { pathname, params },
+        { locale: locale },
+      )
     })
   }
 
@@ -57,14 +70,13 @@ export function LocaleSwitcherSelect({ defaultValue, items }: Props) {
           isPending && 'pointer-events-none opacity-60',
         )}
       >
-        <ListboxButton className="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pl-3 pr-2 text-left text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6">
-          <span className="col-start-1 row-start-1 truncate pr-6">
-            {items.find((item) => item.value === defaultValue)?.label}
-          </span>
-          <LanguageIcon
-            aria-hidden="true"
-            className="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-          />
+        <ListboxButton className="grid w-full cursor-default grid-cols-1 rounded-md bg-white p-2 text-left text-gray-900 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6">
+          <span
+            className={clsx(
+              'fi col-start-1 row-start-1 truncate rounded-md pr-6 text-2xl',
+              items.find((item) => item.value === defaultValue)?.class,
+            )}
+          ></span>
         </ListboxButton>
 
         <ListboxOptions
@@ -74,12 +86,16 @@ export function LocaleSwitcherSelect({ defaultValue, items }: Props) {
           {items.map((item) => (
             <ListboxOption
               key={item.value}
+              aria-label={item.label}
               value={item.value}
               className="group relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 data-[focus]:bg-primary data-[focus]:text-white data-[focus]:outline-none"
             >
-              <span className="block truncate font-normal group-data-[selected]:font-semibold">
-                {item.label}
-              </span>
+              <span
+                className={clsx(
+                  'fi mr-2 block truncate rounded font-normal group-data-[selected]:font-semibold',
+                  item.class,
+                )}
+              ></span>
 
               <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-primary group-[&:not([data-selected])]:hidden group-data-[focus]:text-white">
                 <CheckIcon aria-hidden="true" className="size-5" />
