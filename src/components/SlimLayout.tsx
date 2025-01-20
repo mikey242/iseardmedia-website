@@ -11,7 +11,10 @@ export function SlimLayout({ children }: { children: React.ReactNode }) {
           </main>
         </div>
         <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
-          <Gradient className="absolute inset-0 h-full w-full object-cover" />
+          <Gradient
+            showGrid
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         </div>
       </div>
     </>

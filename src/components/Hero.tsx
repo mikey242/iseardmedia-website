@@ -8,7 +8,10 @@ export function Hero() {
   const t = useTranslations('hero')
   return (
     <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
+      <Gradient
+        showGrid
+        className="absolute inset-2 bottom-0 -z-10 rounded-4xl ring-1 ring-inset ring-black/5"
+      />
       <Container className="relative pb-16 pt-20 text-center lg:pt-32">
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
           {t('heading')}
