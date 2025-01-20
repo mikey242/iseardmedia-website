@@ -91,10 +91,7 @@ export function LocaleSwitcherSelect({ defaultValue, items }: Props) {
               className="group relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 data-[focus]:bg-primary data-[focus]:text-white data-[focus]:outline-none"
             >
               <span
-                className={clsx(
-                  'fi mr-2 block truncate rounded font-normal group-data-[selected]:font-semibold',
-                  item.class,
-                )}
+                className={clsx('fi mr-2 block truncate rounded', item.class)}
               ></span>
 
               <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-primary group-[&:not([data-selected])]:hidden group-data-[focus]:text-white">

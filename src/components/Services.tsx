@@ -50,7 +50,7 @@ function Service({
       </div>
       <h3
         className={clsx(
-          'mt-6 text-sm font-semibold',
+          'mt-6 text-sm font-bold',
           isActive ? 'text-primary' : 'text-gray-400',
         )}
       >

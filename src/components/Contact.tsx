@@ -63,7 +63,7 @@ export default function Contact() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="name"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block text-sm/6 font-medium text-gray-900"
                 >
                   {t('form.name')}
                 </label>
@@ -81,7 +81,7 @@ export default function Contact() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="company"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block text-sm/6 font-medium text-gray-900"
                 >
                   {t('form.company')}
                 </label>
@@ -98,7 +98,7 @@ export default function Contact() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="email"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block text-sm/6 font-medium text-gray-900"
                 >
                   {t('form.email')}
                 </label>
@@ -116,7 +116,7 @@ export default function Contact() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
-                  className="block text-sm/6 font-semibold text-gray-900"
+                  className="block text-sm/6 font-medium text-gray-900"
                 >
                   {t('form.message')}
                 </label>

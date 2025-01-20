@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import { Inter, Lexend } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import clsx from 'clsx'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
@@ -25,16 +25,9 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const lexend = Lexend({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lexend',
+const poppins = Poppins({
+  weight: ['400', '500', '700'],
+  variable: '--font-poppins',
 })
 
 export default async function BaseLayout({
@@ -53,8 +46,7 @@ export default async function BaseLayout({
       lang={locale}
       className={clsx(
         'h-full scroll-smooth bg-white antialiased',
-        inter.variable,
-        lexend.variable,
+        poppins.variable,
       )}
     >
       <body className="flex h-full flex-col">
