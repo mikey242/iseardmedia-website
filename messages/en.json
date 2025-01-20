@@ -90,7 +90,11 @@
       "message": "Message",
       "submit": "Submit"
     },
-    "success": "Message send successfully"
+    "success": "Message send successfully",
+    "privacy": {
+      "text": "We always handle your personal data with care. You can find more information in our <policy>privacy policy</policy>.",
+      "href": "/documents/im-def-pp-012025_en.pdf"
+    }
   },
   "footer": {
     "menu": {
@@ -99,7 +103,20 @@
       "about": "About",
       "contact": "Contact"
     },
-    "copyright": "Copyright © 2025 Iseard Media. All rights reserved. Download our terms and conditions."
+    "copyright": "Copyright © 2025 Iseard Media. All rights reserved.",
+    "legal": "Iseard Media is registered with the Dutch Chamber of Commerce under number 71459200. VAT: NL858723712B01",
+    "terms": {
+      "text": "Terms and Conditions",
+      "href": "/documents/im-def-tc-012025_en.pdf"
+    },
+    "privacy": {
+      "text": "Privacy Policy",
+      "href": "/documents/im-def-pp-012025_en.pdf"
+    },
+    "disclaimer": {
+      "text": "Disclaimer",
+      "href": "/documents/im-def-disc-012025_en.pdf"
+    }
   },
   "notfound": {
     "title": "Page not found",

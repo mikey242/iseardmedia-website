@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 import Script from 'next/script'
+import Link from 'next/link'
 
 export default function Contact() {
   const t = useTranslations('contact')
@@ -152,6 +153,17 @@ export default function Contact() {
                 <Paragraph className="text-red-500">{message}</Paragraph>
               </div>
             )}
+            <div className="mt-10">
+              <p className="text-slate-700">
+                {t.rich('privacy.text', {
+                  policy: (chunks) => (
+                    <Link className="underline" href={t('privacy.href')}>
+                      {chunks}
+                    </Link>
+                  ),
+                })}
+              </p>
+            </div>
           </form>
         )}
       </div>

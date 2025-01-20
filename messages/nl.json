@@ -90,7 +90,11 @@
       "message": "Bericht",
       "submit": "Versturen"
     },
-    "success": "Bericht succesvol verzonden"
+    "success": "Bericht succesvol verzonden",
+    "privacy": {
+      "text": "Wij gaan altijd zorgvuldig met je persoonsgegevens om. Meer informatie vind je in onze <policy>privacyverklaring</policy>.",
+      "href": "/documents/im-def-pp-012025_nl.pdf"
+    }
   },
   "footer": {
     "menu": {
@@ -99,7 +103,20 @@
       "about": "Over ons",
       "contact": "Contact"
     },
-    "copyright": "Copyright © 2025 Iseard Media. Alle rechten voorbehouden. Download onze algemene voorwaarden."
+    "copyright": "Copyright © 2025 Iseard Media. Alle rechten voorbehouden.",
+    "legal": "Iseard Media is ingeschreven bij de KvK onder nummer 71459200. Btw: NL858723712B01",
+    "terms": {
+      "text": "Algemene Voorwaarden",
+      "href": "/documents/im-def-tc-012025_nl.pdf"
+    },
+    "privacy":{
+      "text": "Privacyverklaring",
+      "href": "/documents/im-def-pp-012025_nl.pdf"
+    },
+    "disclaimer": {
+      "text": "Disclaimer",
+      "href": "/documents/im-def-disc-012025_nl.pdf"
+    }
   },
   "notfound": {
     "title": "Pagina niet gevonden",
