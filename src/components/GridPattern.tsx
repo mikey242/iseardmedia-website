@@ -36,7 +36,7 @@ export function GridPattern({
   let currentBlock = useRef<[x: number, y: number]>(undefined)
   let counter = useRef(0)
   let [hoveredBlocks, setHoveredBlocks] = useState<
-    Array<[x: number, y: number, key: number]>
+    Array<[x: number, y: number, key: number, duration?: number]>
   >([])
 
   const timerRef = useRef<NodeJS.Timeout | null>(null)
@@ -52,12 +52,33 @@ export function GridPattern({
       return
     }
     const fade = () => {
-      let interval = getRandom(1, 2000)
+      if (!ref.current) {
+        return
+      }
+
+      let rect = ref.current.getBoundingClientRect()
+      let xWidth = Math.floor(rect.width / 156)
+      let yHeight = Math.floor((rect.height - yOffset) / 156)
+
+      let x1 = xWidth / 2 - xWidth
+      let x2 = xWidth / 2
+
+      let y1 = 0
+      let y2 = yHeight
+
+      let interval = getRandom(0, 2000)
       timerRef.current = setTimeout(() => {
-        const randX = getRandom(-6, 6)
-        const randY = getRandom(0, 4)
+        const randX = getRandom(x1, x2) // Negative values possible due to x=50%
+        const randY = getRandom(y1, y2) // Adjust Y by yOffset
+        const randDuration = getRandom(1, 5)
+
         let key = counter.current++
-        const block = [randX, randY, key] as (typeof hoveredBlocks)[number]
+        const block = [
+          randX,
+          randY,
+          key,
+          randDuration,
+        ] as (typeof hoveredBlocks)[number]
         setHoveredBlocks((blocks) => [...blocks, block])
 
         fade()
@@ -69,7 +90,7 @@ export function GridPattern({
         clearTimeout(timerRef.current)
       }
     }
-  }, [randomFade])
+  }, [randomFade, yOffset])
 
   useEffect(() => {
     if (!interactive) {
@@ -125,7 +146,7 @@ export function GridPattern({
             x={block[0]}
             y={block[1]}
             animate={{ opacity: [0, 1, 0] }}
-            transition={{ duration: 1, times: [0, 0, 1] }}
+            transition={{ duration: block[3] ?? 1, times: [0, 0, 1] }}
             onAnimationComplete={() => {
               setHoveredBlocks((blocks) =>
                 blocks.filter((b) => b[2] !== block[2]),

@@ -27,7 +27,7 @@ export function Gradient({
       {showGrid && (
         <GridPattern
           className="absolute inset-2 left-0 top-0 h-full w-full fill-neutral-50 stroke-neutral-950/5 opacity-10"
-          yOffset={-96}
+          yOffset={-75}
           interactive
           randomFade
         />
