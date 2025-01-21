@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="194.65726"
-   height="58.068176"
-   viewBox="0 0 51.503067 15.363872"
+   width="139.89766"
+   height="59.067905"
+   viewBox="0 0 37.01459 15.628383"
    version="1.1"
    id="svg9820"
    inkscape:version="0.92.0 r15299"
    sodipodi:docname="Pearson_logo.svg"
-   inkscape:export-filename="../Projects/salient-ts/src/images/logos/muzee.svg"
+   inkscape:export-filename="../Projects/salient-ts/src/images/logos/pearson.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -60,9 +60,9 @@
      inkscape:deskcolor="#d1d1d1">
     <inkscape:page
        x="0"
-       y="0"
-       width="51.503067"
-       height="15.363872"
+       y="6.4840009e-22"
+       width="37.014591"
+       height="15.628383"
        id="page2"
        margin="0"
        bleed="0" />
@@ -83,8 +83,8 @@
      inkscape:label="pearson"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-322.87482,-246.85244)"
-     style="display:inline">
+     transform="translate(-331.1828,-246.7202)"
+     style="display:none">
     <g
        id="g37"
        transform="matrix(0.26458333,0,0,0.26458333,322.81316,246.8401)"
@@ -135,8 +135,8 @@
   <g
      clip-path="url(#clip0)"
      id="g17"
-     transform="matrix(0.20563661,0,0,0.20563661,8.3079839,-0.13223531)"
-     style="display:none"
+     transform="scale(0.20563661)"
+     style="display:inline"
      inkscape:label="muzee">
     <g
        id="g1"
