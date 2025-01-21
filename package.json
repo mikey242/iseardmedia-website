@@ -21,7 +21,7 @@
     "autoprefixer": "^10.4.12",
     "clsx": "^2.1.0",
     "flag-icons": "^7.3.2",
-    "framer-motion": "^11.18.0",
+    "framer-motion": "^12.0.0",
     "next": "15.1.5",
     "next-intl": "^3.26.3",
     "nodemailer": "^6.9.16",
