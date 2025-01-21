@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import clsx from 'clsx'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
@@ -50,6 +51,7 @@ export default async function BaseLayout({
         poppins.variable,
       )}
     >
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID as string} />
       <body className="flex h-full flex-col">
         <NextIntlClientProvider messages={messages}>
           {children}
