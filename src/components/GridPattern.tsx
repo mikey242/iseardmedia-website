@@ -25,10 +25,12 @@ function Circle({
 export function GridPattern({
   yOffset = 0,
   interactive = false,
+  randomFade = false,
   ...props
 }: React.ComponentPropsWithoutRef<'svg'> & {
   yOffset?: number
   interactive?: boolean
+  randomFade?: boolean
 }) {
   let ref = useRef<React.ComponentRef<'svg'>>(null)
   let currentBlock = useRef<[x: number, y: number]>(undefined)
@@ -36,14 +38,38 @@ export function GridPattern({
   let [hoveredBlocks, setHoveredBlocks] = useState<
     Array<[x: number, y: number, key: number]>
   >([])
-  let staticBlocks = [
-    [1, 1],
-    [2, 2],
-    [4, 3],
-    [6, 2],
-    [7, 4],
-    [5, 5],
-  ]
+
+  const timerRef = useRef<NodeJS.Timeout | null>(null)
+
+  const getRandom = (min: number, max: number) => {
+    const minCeil = Math.ceil(min)
+    const maxFloor = Math.floor(max)
+    return Math.floor(Math.random() * (maxFloor - minCeil + 1) + minCeil)
+  }
+
+  useEffect(() => {
+    if (!randomFade) {
+      return
+    }
+    const fade = () => {
+      let interval = getRandom(1, 2000)
+      timerRef.current = setTimeout(() => {
+        const randX = getRandom(-6, 6)
+        const randY = getRandom(0, 4)
+        let key = counter.current++
+        const block = [randX, randY, key] as (typeof hoveredBlocks)[number]
+        setHoveredBlocks((blocks) => [...blocks, block])
+
+        fade()
+      }, interval)
+    }
+    fade()
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current)
+      }
+    }
+  }, [randomFade])
 
   useEffect(() => {
     if (!interactive) {
@@ -93,9 +119,6 @@ export function GridPattern({
   return (
     <svg ref={ref} aria-hidden="true" {...props}>
       <svg x="50%" y={yOffset} strokeWidth="0" className="overflow-visible">
-        {staticBlocks.map((block) => (
-          <Circle key={`${block}`} x={block[0]} y={block[1]} />
-        ))}
         {hoveredBlocks.map((block) => (
           <Circle
             key={block[2]}
@@ -103,11 +126,11 @@ export function GridPattern({
             y={block[1]}
             animate={{ opacity: [0, 1, 0] }}
             transition={{ duration: 1, times: [0, 0, 1] }}
-            // onAnimationComplete={() => {
-            //   setHoveredBlocks((blocks) =>
-            //     blocks.filter((b) => b[2] !== block[2]),
-            //   )
-            // }}
+            onAnimationComplete={() => {
+              setHoveredBlocks((blocks) =>
+                blocks.filter((b) => b[2] !== block[2]),
+              )
+            }}
           />
         ))}
       </svg>

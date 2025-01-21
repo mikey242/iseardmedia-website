@@ -19,14 +19,17 @@ export function Gradient({
   className: string
   showGrid?: boolean // Optional, since you provide a default value
 }) {
+  const mask =
+    '[mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]'
   return (
-    <div className="-z-10">
-      <div {...props} className={clsx(className, active)} />
+    <div className={clsx(className, '-z-10 overflow-hidden')}>
+      <div {...props} className={clsx(active, 'h-full w-full')} />
       {showGrid && (
         <GridPattern
-          className="absolute inset-x-0 -top-14 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 opacity-10 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+          className="absolute inset-2 left-0 top-0 h-full w-full fill-neutral-50 stroke-neutral-950/5 opacity-10"
           yOffset={-96}
           interactive
+          randomFade
         />
       )}
     </div>
