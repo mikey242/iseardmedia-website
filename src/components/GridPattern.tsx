@@ -70,7 +70,7 @@ export function GridPattern({
       timerRef.current = setTimeout(() => {
         const randX = getRandom(x1, x2) // Negative values possible due to x=50%
         const randY = getRandom(y1, y2) // Adjust Y by yOffset
-        const randDuration = getRandom(1, 5)
+        const randDuration = getRandom(5, 10)
 
         let key = counter.current++
         const block = [
