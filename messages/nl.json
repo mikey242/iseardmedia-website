@@ -24,7 +24,7 @@
   },
   "services": {
     "heading": "Diensten",
-    "subtitle": "Met onze diensten zorgen we voor helderheid en betere resultaten van jouw marketingcampagnes:",
+    "subtitle": "Zo maken we jouw marketingcampagnes succesvol:",
     "first": {
       "name": "Strategie en planning",
       "summary": "De juiste koers bepalen",
@@ -52,7 +52,7 @@
     "first": {
       "name": "Kudos Donations",
       "type": "WordPress-plugin voor non-profits",
-      "description": "Een donatieplugin voor non-profits"
+      "description": "Dé donatie-knop voor non-profit WordPress websites"
     },
     "second": {
       "name": "Loosduinen Gaat Los",
@@ -77,12 +77,12 @@
   },
   "about": {
     "heading": "Wie wij zijn",
-    "subtitle": "Wij zijn een gespecialiseerde marketingagency gevestigd in Nederland, en werken samen met organisaties door heel Europa om zinvolle veranderingen te creëren via effectieve marketing. Met meer dan tien jaar ervaring in strategie, analytics en technische ontwikkeling helpen we onze klanten hun doelen te bereiken en een positieve impact te maken. Laten we praten over hoe we jouw campagnes kunnen ondersteunen.",
+    "subtitle": "Wij zijn een gespecialiseerd marketingbureau uit Nederland en werken samen met organisaties in heel Europa om écht verschil te maken met effectieve marketing. Met ruim tien jaar ervaring in strategie, campagnes, data-analyse en technische ontwikkeling zorgen we voor resultaten die passen bij jouw doelen. Benieuwd wat we voor jouw campagnes kunnen betekenen? Laten we in gesprek gaan.",
     "button": "Neem contact op"
   },
   "contact": {
     "heading": "Contact",
-    "subtitle": "We horen graag van je",
+    "subtitle": "We horen graag van je! Laat ons weten hoe we je kunnen helpen bij jouw volgende project.",
     "form": {
       "name": "Naam",
       "company": "Bedrijf",

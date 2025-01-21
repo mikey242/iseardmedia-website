@@ -24,7 +24,7 @@
   },
   "services": {
     "heading": "Services",
-    "subtitle": "We bring clarity and impact to your marketing campaigns through the following services:",
+    "subtitle": "Here’s how we make your marketing campaigns a success:",
     "first": {
       "name": "Strategy and planning",
       "summary": "Setting the right goals",
@@ -77,12 +77,12 @@
   },
   "about": {
     "heading": "Who we are",
-    "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, analytics, and technical development, we’re passionate about helping our clients achieve their goals and make a positive impact. Let’s talk about how we can support with your campaigns.",
+    "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, campaign delivery, analytics, and technical development, we’re committed to delivering measurable results that align with your goals. Let’s talk about how we can support your campaigns.",
     "button": "Get in touch"
   },
   "contact": {
     "heading": "Contact",
-    "subtitle": "We'd love to hear from you",
+    "subtitle": "We'd love to hear from you. Let us know how we can help you with your next project.",
     "form": {
       "name": "Name",
       "company": "Company",
