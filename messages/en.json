@@ -2,9 +2,9 @@
   "meta": {
     "title": {
       "template": "%s - Iseard Media",
-      "default": "Iseard Media - Your trusted partner in effective marketing"
+      "default": "Iseard Media - Your partner in effective marketing"
     },
-    "description": "We collaborate with organisations that aim to make a positive impact, from arts and education to environmental initiatives and public services. By providing expert advice and technical solutions, we help you optimise your marketing campaigns and achieve measurable results."
+    "description": "We collaborate with organisations committed to making a positive impact, from education and nature conservation to arts, culture, and the public sector."
   },
   "header": {
     "menu": {
@@ -15,12 +15,12 @@
     }
   },
   "hero": {
-    "heading": "Your trusted partner in effective marketing",
-    "subtitle": "We collaborate with organisations that strive to make a positive impact, from arts and education to environmental initiatives and public services. Through expect advice and technical solutions, we help create and optimise marketing campaigns aligned with your purpose.",
+    "heading": "Your partner in effective marketing",
+    "subtitle": "We collaborate with organisations committed to making a positive impact, from education and nature conservation to arts, culture, and the public sector. With expert advice, campaign management, and technical solutions, we help you build and optimise campaigns that are fully aligned with your goals.",
     "button": "Get in touch"
   },
   "partners": {
-    "heading": "We've worked with some amazing organisations"
+    "heading": "We work with some amazing organisations:"
   },
   "services": {
     "heading": "Services",
@@ -31,9 +31,9 @@
       "description": "We refine and optimise both new and existing campaigns with expert consultation and strategic guidance."
     },
     "second": {
-      "name": "Campaign landing pages",
+      "name": "Campaign websites",
       "summary": "Attractive design",
-      "description": "We create high-performing landing pages tailored to your audience and designed to convert."
+      "description": "We create high-performing websites tailored to your audience and designed to convert."
     },
     "third": {
       "name": "Dashboards & tracking",
@@ -48,31 +48,31 @@
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Here are some of the projects we're proud to have worked on (or still do!)",
+    "subtitle": "Here are some of the projects we're proud to have worked on:",
     "first": {
       "name": "Kudos Donations",
       "type": "WordPress plugin for non-profits",
-      "description": "Used by hundreds of organisations, this plugin helps non-profits raise funds directly through their own website"
+      "description": "A donation plugin that helps non-profits to raise funds"
     },
     "second": {
       "name": "Loosduinen Gaat Los",
       "type": "Festival website and marketing",
-      "description": "We built the website for this arts and culture festival and continue to support their marketing activities every year"
+      "description": "We built this festival's website and give marketing support"
     },
     "third": {
       "name": "BBOWT family walking trail",
       "type": "Web app with QR walking guide",
-      "description": "We developed an interactive walking trail with sound and quizzes for the BBOWT"
+      "description": "An interactive trail with sound and quizzes for BBOWT"
     },
     "fourth": {
       "name": "Word Warbler",
       "type": "Interactive English word game",
-      "description": "This fun language game allows students to play and practice their vocabulary"
+      "description": "A fun vocabulary game for language learners"
     },
     "fifth": {
       "name": "Aan Tafel Met Charles Dickens",
       "type": "A cookbook website",
-      "description": "We created this bespoke discovery landing page to celebrate their book and theatre release"
+      "description": "A bespoke landing page for the book and theatre release"
     }
   },
   "about": {

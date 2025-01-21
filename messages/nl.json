@@ -2,9 +2,9 @@
   "meta": {
     "title": {
       "template": "%s - Iseard Media",
-      "default": "Iseard Media - Jouw vertrouwde partner in effectieve marketing"
+      "default": "Iseard Media - Jouw partner voor effectieve marketing"
     },
-    "description": "We werken samen met organisaties die een positieve impact willen maken, van kunst en onderwijs tot milieuprojecten en publieke diensten. Door deskundig advies en technische oplossingen te bieden, helpen we je om je marketingcampagnes te optimaliseren en meetbare resultaten te behalen."
+    "description": "We werken graag samen met organisaties die een positieve impact willen maken, van onderwijs en natuurbeheer tot kunst, cultuur en de publieke sector."
   },
   "header": {
     "menu": {
@@ -15,64 +15,64 @@
     }
   },
   "hero": {
-    "heading": "Jouw vertrouwde partner in effectieve marketing",
-    "subtitle": "We werken samen met organisaties die een positieve impact willen maken, van kunst en onderwijs tot milieuprojecten en publieke diensten. Met deskundig advies en technische oplossingen helpen we bij het creëren en optimaliseren van marketingcampagnes die aansluiten bij jouw missie.",
+    "heading": "Jouw partner voor effectieve marketing",
+    "subtitle": "We werken graag samen met organisaties die een positieve impact willen maken, van onderwijs en natuurbeheer tot kunst, cultuur en de publieke sector. Met helder advies, sterke campagnesturing en slimme technische oplossingen helpen we je campagnes opbouwen en optimaliseren, helemaal afgestemd op jouw doelen.",
     "button": "Neem contact op"
   },
   "partners": {
-    "heading": "We hebben samengewerkt met geweldige organisaties"
+    "heading": "We werken samen met geweldige organisaties:"
   },
   "services": {
     "heading": "Diensten",
-    "subtitle": "We brengen helderheid en impact in je marketingcampagnes via de volgende diensten:",
+    "subtitle": "Met onze diensten zorgen we voor helderheid en betere resultaten van jouw marketingcampagnes:",
     "first": {
       "name": "Strategie en planning",
-      "summary": "De juiste doelen stellen",
+      "summary": "De juiste koers bepalen",
       "description": "We verfijnen en optimaliseren nieuwe én bestaande campagnes met deskundig advies en strategische begeleiding."
     },
     "second": {
-      "name": "Campagne-landingspagina's",
-      "summary": "Aantrekkelijk ontwerp",
-      "description": "We maken hoog presterende landingspagina's die aansluiten op je doelgroep en ontworpen zijn om te converteren."
+      "name": "Campagne-websites",
+      "summary": "Een ontwerp dat overtuigt",
+      "description": "We ontwerpen websites die aansluiten bij jouw doelgroep en gericht zijn op maximaal resultaat."
     },
     "third": {
       "name": "Dashboards & tracking",
-      "summary": "Laat je leiden door data",
-      "description": "We bieden op maat gemaakte performance dashboards en nauwkeurige tracking om je doelen te meten."
+      "summary": "Inzicht door data",
+      "description": "We leveren op maat gemaakte dashboards en nauwkeurige tracking, zodat je precies weet hoe je jouw doelen bereikt."
     },
     "fourth": {
       "name": "Google Ads & Grants",
-      "summary": "Betaalde media beheren",
-      "description": "We beheren alle Google Ads-diensten en bieden gespecialiseerd Grants-beheer voor non-profitorganisaties."
+      "summary": "Effectief adverteren",
+      "description": "We nemen het beheer van Google Ads uit handen en bieden gespecialiseerd Grants-beheer voor non-profitorganisaties."
     }
   },
   "projects": {
     "heading": "Projecten",
-    "subtitle": "Dit zijn enkele van de projecten waar we trots op zijn (en soms nog steeds aan werken!)",
+    "subtitle": "Hier zijn enkele projecten waar we met trots aan gewerkt hebben:",
     "first": {
       "name": "Kudos Donations",
       "type": "WordPress-plugin voor non-profits",
-      "description": "Deze plugin wordt door honderden organisaties gebruikt om rechtstreeks via hun eigen website fondsen te werven."
+      "description": "Een donatieplugin voor non-profits"
     },
     "second": {
       "name": "Loosduinen Gaat Los",
       "type": "Festivalwebsite en marketing",
-      "description": "We hebben de website gebouwd voor dit kunst- en cultuurfestival en ondersteunen jaarlijks hun marketingactiviteiten."
+      "description": "Een festivalwebsite plus marketingstrategie."
     },
     "third": {
       "name": "BBOWT familie-wandelroute",
       "type": "Webapp met QR-wandelgids",
-      "description": "We hebben een interactieve wandelroute ontwikkeld met geluid en quizzen voor de BBOWT."
+      "description": "Een interactieve wandelroute ontwikkeld voor BBOWT."
     },
     "fourth": {
       "name": "Word Warbler",
       "type": "Interactief Engels woordspel",
-      "description": "Dit leuke taalspel laat studenten spelen en hun woordenschat oefenen."
+      "description": "Een leuk taalspel om je woordenschat te oefenen."
     },
     "fifth": {
       "name": "Aan Tafel Met Charles Dickens",
       "type": "Een kookboekwebsite",
-      "description": "We hebben deze op maat gemaakte landingspagina ontworpen om hun boek en theaterrelease te vieren."
+      "description": "Een website ter ere van het boek en de theatershow"
     }
   },
   "about": {
