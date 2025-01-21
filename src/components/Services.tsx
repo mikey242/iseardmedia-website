@@ -6,13 +6,14 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import screenshot1 from '@/images/screenshots/services/im-service-1.png'
+import screenshot2 from '@/images/screenshots/services/im-service-2.png'
+import screenshot3 from '@/images/screenshots/services/im-service-3.png'
+import screenshot4 from '@/images/screenshots/services/im-service-4.png'
 import { useTranslations } from 'next-intl'
 import { Heading, Paragraph } from './Text'
 
-interface Project {
+interface Service {
   name: React.ReactNode
   summary: string
   description: string
@@ -21,7 +22,7 @@ interface Project {
 }
 
 type Props = {
-  features: Array<Project>
+  features: Array<Service>
 }
 
 function Service({
@@ -30,7 +31,7 @@ function Service({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<'div'> & {
-  feature: Project
+  feature: Service
   isActive: boolean
 }) {
   return (
@@ -143,12 +144,12 @@ function ServicesDesktop({ features }: Props) {
 export function Services() {
   const t = useTranslations('services')
 
-  const features: Array<Project> = [
+  const features: Array<Service> = [
     {
       name: t('first.name'),
       summary: t('first.summary'),
       description: t('first.description'),
-      image: screenshotProfitLoss,
+      image: screenshot1,
       icon: function ReportingIcon() {
         let id = useId()
         return (
@@ -181,7 +182,7 @@ export function Services() {
       name: t('second.name'),
       summary: t('second.summary'),
       description: t('second.description'),
-      image: screenshotInventory,
+      image: screenshot2,
       icon: function InventoryIcon() {
         return (
           <>
@@ -207,7 +208,7 @@ export function Services() {
       name: t('third.name'),
       summary: t('third.summary'),
       description: t('third.description'),
-      image: screenshotContacts,
+      image: screenshot3,
       icon: function ContactsIcon() {
         return (
           <>
@@ -228,7 +229,7 @@ export function Services() {
       name: t('fourth.name'),
       summary: t('fourth.summary'),
       description: t('fourth.description'),
-      image: screenshotContacts,
+      image: screenshot4,
       icon: function ContactsIcon() {
         return (
           <>
