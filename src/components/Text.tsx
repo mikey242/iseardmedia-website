@@ -73,7 +73,7 @@ export function Paragraph({
       data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
-        'mt-4 text-lg font-medium tracking-tight text-slate-700 data-[dark]:text-white',
+        'mt-4 text-lg tracking-tight text-slate-700 data-[dark]:text-white',
       )}
     />
   )

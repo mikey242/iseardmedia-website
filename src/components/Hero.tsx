@@ -16,7 +16,7 @@ export function Hero() {
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
           {t('heading')}
         </h1>
-        <Paragraph className="mx-auto mt-6 max-w-2xl font-normal text-slate-900">
+        <Paragraph className="mx-auto mt-6 max-w-2xl text-slate-900">
           {t('subtitle')}
         </Paragraph>
         <div className="mt-10">
