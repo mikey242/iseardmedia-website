@@ -1,30 +1,13 @@
-import { type Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { GoogleTagManager } from '@next/third-parties/google'
 import clsx from 'clsx'
 import { NextIntlClientProvider } from 'next-intl'
-import { getLocale, getMessages, getTranslations } from 'next-intl/server'
+import { getMessages } from 'next-intl/server'
 import '@/styles/tailwind.css'
+import { generateAppMetadata } from '@/utils/metadata'
 import React from 'react'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: 'meta' })
-
-  return {
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
-    ),
-    title: {
-      template: t('title.template'),
-      default: t('title.default'),
-    },
-    description: t('description'),
-    openGraph: {
-      images: '/images/og.png',
-    },
-  }
-}
+export const generateMetadata = generateAppMetadata
 
 const poppins = Poppins({
   subsets: ['latin'],

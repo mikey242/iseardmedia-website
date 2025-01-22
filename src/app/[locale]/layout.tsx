@@ -1,30 +1,11 @@
-import { type Metadata } from 'next'
-import { getLocale, getTranslations } from 'next-intl/server'
-
 import '@/styles/tailwind.css'
 import React from 'react'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import BaseLayout from '@/components/BaseLayout'
+import { generateAppMetadata } from '@/utils/metadata'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: 'meta' })
-
-  return {
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
-    ),
-    title: {
-      template: t('title.template'),
-      default: t('title.default'),
-    },
-    description: t('description'),
-    openGraph: {
-      images: `/images/og-${locale}.png`,
-    },
-  }
-}
+export const generateMetadata = generateAppMetadata
 
 export default async function LocaleLayout({
   children,
