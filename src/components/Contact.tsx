@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 import Script from 'next/script'
-import Link from 'next/link'
+import { Link } from '@/components/Link'
 
 export default function Contact() {
   const t = useTranslations('contact')

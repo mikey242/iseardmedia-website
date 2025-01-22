@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import {
   Popover,
   PopoverBackdrop,
@@ -11,7 +11,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
+import { NavLink } from '@/components/Link'
 import { useTranslations } from 'next-intl'
 import LocaleSwitcher from './LocaleSwitcher'
 import React from 'react'
@@ -87,11 +87,11 @@ function MobileNavigation() {
 export function Header() {
   const t = useTranslations('header')
   return (
-    <header className="relative py-10">
+    <header id="top" className="relative py-10">
       <Container className="relative">
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
+            <Link href="/" aria-label="Home">
               <Logo className="h-16 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
