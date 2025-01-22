@@ -44,13 +44,13 @@ export default function Contact() {
       id="contact"
       className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8"
     >
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="mx-auto max-w-2xl md:text-center">
         <Heading as="h2">{t('heading')}</Heading>
         <Paragraph>{t('subtitle')}</Paragraph>
       </div>
-      <div className="mx-auto mt-16 max-w-xl text-center sm:mt-20">
+      <div className="mx-auto mt-16 max-w-xl sm:mt-20">
         {hasSubmitted ? (
-          <div className="text-center">
+          <div className="md:text-center">
             <Heading as="h3">{t('success')}</Heading>
           </div>
         ) : (
@@ -146,7 +146,9 @@ export default function Contact() {
               data-size="flexible"
             ></div>
             <div className="mt-10">
-              <Button className="w-full text-xl">{t('form.submit')}</Button>
+              <Button className="w-full text-xl lg:w-auto">
+                {t('form.submit')}
+              </Button>
             </div>
             {message && (
               <div>

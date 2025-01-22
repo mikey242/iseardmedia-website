@@ -11,10 +11,14 @@ export function About() {
       className="relative mx-2 mt-2 overflow-hidden rounded-4xl bg-gray-900 py-32"
     >
       <Container className="relative">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl md:text-center">
           <Heading dark>{t('heading')}</Heading>
           <Paragraph dark>{t('subtitle')}</Paragraph>
-          <Button href="#contact" color="white" className="mt-10 text-xl">
+          <Button
+            href="#contact"
+            color="white"
+            className="mt-10 w-full text-xl lg:w-auto"
+          >
             {t('button')}
           </Button>
         </div>
