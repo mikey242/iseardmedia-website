@@ -17,7 +17,10 @@
   "hero": {
     "heading": "Your partner in effective marketing",
     "subtitle": "We collaborate with organisations committed to making a positive impact, from education and nature conservation to arts, culture, and the public sector. With expert advice, campaign management, and technical solutions, we help you build and optimise campaigns that are fully aligned with your goals.",
-    "button": "Get in touch"
+    "button": {
+      "services": "Discover what we do",
+      "contact": "Get in touch"
+    }
   },
   "partners": {
     "heading": "We've worked with some amazing organisations"

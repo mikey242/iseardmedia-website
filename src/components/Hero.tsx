@@ -19,9 +19,17 @@ export function Hero() {
         <Paragraph className="mx-auto mt-6 max-w-2xl text-slate-900">
           {t('subtitle')}
         </Paragraph>
-        <div className="mt-10">
-          <Button className="text-xl" href="#contact">
-            {t('button')}
+        <div className="mt-12 flex flex-col justify-center gap-x-6 gap-y-4 sm:flex-row">
+          <Button className="text-xl" href="#services">
+            {t('button.services')}
+          </Button>
+          <Button
+            variant="outline"
+            color="slate"
+            className="text-xl"
+            href="#contact"
+          >
+            {t('button.contact')}
           </Button>
         </div>
       </Container>
