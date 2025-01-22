@@ -28,22 +28,22 @@
     "first": {
       "name": "Strategy and planning",
       "summary": "Setting the right goals",
-      "description": "We refine and optimise both new and existing campaigns with expert consultation and strategic guidance."
+      "description": "We set up effective new campaigns and optimise existing ones with expert advice and strategic support."
     },
     "second": {
       "name": "Campaign websites",
-      "summary": "Attractive design",
+      "summary": "A design that delivers",
       "description": "We create high-performing websites tailored to your audience and designed to convert."
     },
     "third": {
       "name": "Dashboards & tracking",
       "summary": "Let the data guide you",
-      "description": "We provide tailored performance dashboards and precise tracking to meaure your goals."
+      "description": "We provide tailored performance dashboards and precise tracking to measure your goals."
     },
     "fourth": {
       "name": "Google Ads & Grants",
       "summary": "Managing paid media",
-      "description": "We manage the full suite of Google Ads services and offer specialised Grants management for non-profits."
+      "description": "We manage Google Ads and offer specialised Grants management for non-profits."
     }
   },
   "projects": {
@@ -66,7 +66,7 @@
     },
     "fourth": {
       "name": "Word Warbler",
-      "type": "Interactive English word game",
+      "type": "Interactive word game",
       "description": "A fun vocabulary game for language learners"
     },
     "fifth": {
@@ -77,7 +77,7 @@
   },
   "about": {
     "heading": "Who we are",
-    "subtitle": "We are a specialised marketing agency based in The Netherlands, collaborating with organisations across Europe to create meaningful change through effective marketing. With over a decade of expertise in strategy, campaign delivery, analytics, and technical development, we’re committed to delivering measurable results that align with your goals. Let’s talk about how we can support your campaigns.",
+    "subtitle": "We are a specialised marketing agency collaborating with organisations across Europe who strive to make a difference in the world. We help achieve this through effective marketing. With over a decade of expertise in strategy, campaign delivery, analytics, and technical development, we’re committed to delivering measurable results that align with your goals. Let’s talk about how we can support your campaigns.",
     "button": "Get in touch"
   },
   "contact": {
@@ -90,7 +90,7 @@
       "message": "Message",
       "submit": "Submit"
     },
-    "success": "Message send successfully",
+    "success": "Message sent successfully",
     "privacy": {
       "text": "We always handle your personal data with care. You can find more information in our <policy>privacy policy</policy>.",
       "href": "/documents/im-def-pp-012025_en.pdf"
