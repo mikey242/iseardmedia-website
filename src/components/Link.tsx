@@ -1,4 +1,5 @@
-import { Link as LinkWrapper } from '@/i18n/routing'
+import { Link as I18NLink } from '@/i18n/routing'
+import NextLink from 'next/link'
 import React from 'react'
 import clsx from 'clsx'
 
@@ -10,12 +11,12 @@ export function NavLink({
   children: React.ReactNode
 }) {
   return (
-    <LinkWrapper
+    <I18NLink
       href={href}
       className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
     >
       {children}
-    </LinkWrapper>
+    </I18NLink>
   )
 }
 
@@ -29,7 +30,7 @@ export function Link({
   className?: string
 }) {
   return (
-    <LinkWrapper
+    <NextLink
       href={href}
       className={clsx(
         'inline-block rounded-lg text-slate-700 hover:text-slate-900',
@@ -37,6 +38,6 @@ export function Link({
       )}
     >
       {children}
-    </LinkWrapper>
+    </NextLink>
   )
 }
