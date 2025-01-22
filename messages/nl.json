@@ -20,11 +20,11 @@
     "button": "Neem contact op"
   },
   "partners": {
-    "heading": "We werken samen met geweldige organisaties:"
+    "heading": "We hebben samengewerkt met geweldige organisaties"
   },
   "services": {
     "heading": "Diensten",
-    "subtitle": "Zo maken we jouw marketingcampagnes succesvol:",
+    "subtitle": "Zo maken we jouw marketingcampagnes succesvol",
     "first": {
       "name": "Strategie en planning",
       "summary": "De juiste koers bepalen",
@@ -48,7 +48,7 @@
   },
   "projects": {
     "heading": "Projecten",
-    "subtitle": "Hier zijn enkele projecten waar we met trots aan gewerkt hebben:",
+    "subtitle": "Hier zijn enkele projecten waar we met trots aan gewerkt hebben",
     "first": {
       "name": "Kudos Donations",
       "type": "WordPress-plugin voor non-profits",
@@ -103,7 +103,7 @@
       "about": "Over ons",
       "contact": "Contact"
     },
-    "copyright": "Copyright © 2025 Iseard Media. Alle rechten voorbehouden.",
+    "copyright": "Copyright © 2017-{currentYear} Iseard Media. Alle rechten voorbehouden.",
     "legal": "Iseard Media is ingeschreven bij de KvK onder nummer 71459200. Btw: NL858723712B01",
     "terms": {
       "text": "Algemene Voorwaarden",

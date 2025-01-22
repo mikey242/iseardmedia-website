@@ -20,11 +20,11 @@
     "button": "Get in touch"
   },
   "partners": {
-    "heading": "We work with some amazing organisations:"
+    "heading": "We've worked with some amazing organisations"
   },
   "services": {
     "heading": "Services",
-    "subtitle": "Here’s how we make your marketing campaigns a success:",
+    "subtitle": "Here’s how we make your marketing campaigns a success",
     "first": {
       "name": "Strategy and planning",
       "summary": "Setting the right goals",
@@ -48,7 +48,7 @@
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Here are some of the projects we're proud to have worked on:",
+    "subtitle": "Here are some of the projects we're proud to have worked on",
     "first": {
       "name": "Kudos Donations",
       "type": "WordPress plugin for non-profits",
@@ -103,7 +103,7 @@
       "about": "About",
       "contact": "Contact"
     },
-    "copyright": "Copyright © 2025 Iseard Media. All rights reserved.",
+    "copyright": "Copyright © 2017-{currentYear} Iseard Media. All rights reserved.",
     "legal": "Iseard Media is registered with the Dutch Chamber of Commerce under number 71459200. VAT: NL858723712B01",
     "terms": {
       "text": "Terms and Conditions",
