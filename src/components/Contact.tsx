@@ -140,7 +140,6 @@ export default function Contact() {
             <div
               suppressHydrationWarning
               className="cf-turnstile mt-8"
-              // data-appearance="interaction-only"
               data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
               data-callback="javascriptCallback"
               data-size="flexible"
