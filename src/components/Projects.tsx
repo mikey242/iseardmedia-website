@@ -87,7 +87,7 @@ function ProjectCard({
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] to-[75%] ring-1 ring-inset ring-gray-950/10 sm:from-25%"
+        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] to-[75%] ring-2 ring-inset ring-gray-950/10 sm:from-25%"
       />
       <figure className="relative p-10">
         <p className="relative text-xl/7 text-white">{children}</p>
@@ -123,16 +123,16 @@ export function Projects() {
 
   const projects = [
     {
-      img: screenshotKudos,
-      name: t('first.name'),
-      type: t('first.type'),
-      description: t('first.description'),
-    },
-    {
       img: screenshotLGL,
       name: t('second.name'),
       type: t('second.type'),
       description: t('second.description'),
+    },
+    {
+      img: screenshotKudos,
+      name: t('first.name'),
+      type: t('first.type'),
+      description: t('first.description'),
     },
     {
       img: screenshotBBOWT,
@@ -189,7 +189,7 @@ export function Projects() {
         <div className="w-[42rem] shrink-0 sm:w-[54rem]" />
       </div>
       <Container className="mt-16">
-        <div className="flex justify-end">
+        <div className="flex justify-center">
           <div className="hidden sm:flex sm:gap-2">
             {projects.map(({ name }, projectIndex) => (
               <Headless.Button
@@ -198,8 +198,8 @@ export function Projects() {
                 data-active={activeIndex === projectIndex ? true : undefined}
                 aria-label={`Scroll to testimonial from ${name}`}
                 className={clsx(
-                  'size-2.5 rounded-full border border-transparent bg-gray-300 transition',
-                  'data-[active]:bg-gray-400 data-[hover]:bg-gray-400',
+                  'size-3 rounded-full border border-transparent bg-gray-300 transition',
+                  'data-[active]:bg-primary data-[hover]:bg-gray-400',
                   'forced-colors:data-[active]:bg-[Highlight] forced-colors:data-[focus]:outline-offset-4',
                 )}
               />
