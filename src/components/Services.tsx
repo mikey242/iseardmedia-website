@@ -130,7 +130,7 @@ function ServicesDesktop({ features }: Props) {
                     <Image
                       className="w-full"
                       src={feature.image}
-                      alt=""
+                      alt={feature.summary}
                       sizes="52.75rem"
                     />
                   </div>
