@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: t('description'),
     openGraph: {
-      images: '/images/og.png',
+      images: `/images/og-${locale}.png`,
     },
   }
 }
