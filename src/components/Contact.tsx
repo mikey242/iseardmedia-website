@@ -5,14 +5,15 @@ import { Button } from '@/components/Button'
 import React, { useState } from 'react'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
-import Script from 'next/script'
 import { Link } from '@/components/Link'
+import Turnstile from 'react-turnstile'
 
 export default function Contact() {
   const t = useTranslations('contact')
   const [isBusy, setIsBusy] = useState(false)
   const [message, setMessage] = useState('')
   const [hasSubmitted, setHasSubmitted] = useState(false)
+
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsBusy(true)
@@ -132,18 +133,11 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <Script
-              src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-              async
-              defer
-            ></Script>
-            <div
-              suppressHydrationWarning
-              className="cf-turnstile mt-8"
-              data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
-              data-callback="javascriptCallback"
-              data-size="flexible"
-            ></div>
+            <Turnstile
+              className="mt-8"
+              sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
+              size="flexible"
+            />
             <div className="mt-10">
               <Button className="w-full text-xl lg:w-auto">
                 {t('form.submit')}
