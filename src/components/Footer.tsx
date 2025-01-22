@@ -45,7 +45,9 @@ export function Footer() {
 
           <div className="flex flex-col items-center justify-center border-t border-slate-400/10 py-10 text-sm text-slate-500">
             <p className="mt-6 sm:mt-0">{t('legal')}</p>
-            <p className="mt-6 sm:mt-0">{t('copyright')}</p>
+            <p className="mt-6 sm:mt-0">
+              {t('copyright', { currentYear: new Date().getFullYear() })}
+            </p>
           </div>
         </Container>
       </div>
