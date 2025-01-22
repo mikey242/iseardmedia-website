@@ -16,7 +16,7 @@
   },
   "hero": {
     "heading": "Your partner in effective marketing",
-    "subtitle": "We collaborate with organisations that make a positive impact, from education and the arts to nature conservation and the public sector. With expert advice, campaign management, and technical solutions, we help you build and optimise campaigns aligned with your goals.",
+    "subtitle": "We collaborate with organisations that aim to make a positive impact, from education and the arts to nature conservation and the public sector. With expert advice, campaign management, and technical solutions, we help you build and optimise campaigns aligned with your goals.",
     "button": {
       "services": "Explore our services",
       "contact": "Get in touch"
@@ -59,13 +59,13 @@
     },
     "second": {
       "name": "Loosduinen Gaat Los",
-      "type": "Festival website and marketing",
+      "type": "Website and marketing strategy",
       "description": "We built this festival's website and give marketing support"
     },
     "third": {
       "name": "BBOWT family walking trail",
       "type": "Web app with QR walking guide",
-      "description": "An interactive trail with sound and quizzes for BBOWT"
+      "description": "An interactive trail with sound and quizzes"
     },
     "fourth": {
       "name": "Word Warbler",
