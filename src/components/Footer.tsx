@@ -17,14 +17,14 @@ export function Footer() {
               <Logo className="mx-auto h-12 w-auto" />
             </Link>
             <nav className="mt-10 text-sm" aria-label="quick links">
-              <div className="-my-1 flex justify-center gap-x-6">
+              <div className="-my-1 flex flex-wrap justify-center gap-x-12 gap-y-3">
                 <Link href="#services">{t('menu.services')}</Link>
                 <Link href="#projects">{t('menu.projects')}</Link>
                 <Link href="#about">{t('menu.about')}</Link>
                 <Link href="#contact">{t('menu.contact')}</Link>
               </div>
             </nav>
-            <div className="mt-10 flex justify-center gap-x-6 text-sm">
+            <div className="mt-10 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm">
               <Link href={t('terms.href')}>{t('terms.text')}</Link>
               <Link href={t('privacy.href')}>{t('privacy.text')}</Link>
               <Link href={t('disclaimer.href')}>{t('disclaimer.text')}</Link>
