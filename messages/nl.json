@@ -2,7 +2,7 @@
   "meta": {
     "title": {
       "template": "%s - Iseard Media",
-      "default": "Iseard Media - Jouw partner voor effectieve marketing"
+      "default": "Iseard Media - Jouw partner in effectieve marketing"
     },
     "description": "Neem contact op en ontdek hoe we jouw marketingcampagnes kunnen verbeteren met deskundig advies, effectief campagnebeheer en slimme technische oplossingen."
   },
@@ -16,7 +16,7 @@
     "language": "Taal wijzigen"
   },
   "hero": {
-    "heading": "Jouw partner voor effectieve marketing",
+    "heading": "Jouw partner in effectieve marketing",
     "subtitle": "We werken samen met organisaties die een positief verschil willen maken, van onderwijs en kunst tot natuurbehoud en de publieke sector. Met helder advies, effectieve campagnesturing en slimme technische oplossingen zetten we campagnes op die aansluiten bij jouw doelen.",
     "button": {
       "services": "Ontdek onze aanpak",
@@ -24,20 +24,20 @@
     }
   },
   "partners": {
-    "heading": "We hebben samengewerkt met geweldige organisaties"
+    "heading": "We hebben samengewerkt met o.a. deze organisaties."
   },
   "services": {
     "heading": "Diensten",
-    "subtitle": "Zo maken we jouw marketingcampagnes succesvol",
+    "subtitle": "Zo maken we jouw marketingcampagnes succesvol.",
     "first": {
       "name": "Strategie en planning",
       "summary": "De juiste koers bepalen",
-      "description": "We brengen jouw doelen in kaart en ontwikkelen en optimaliseren campagnes die daarop aansluiten."
+      "description": "We brengen jouw doelen in kaart, en ontwikkelen en optimaliseren campagnes die daarop aansluiten."
     },
     "second": {
       "name": "Campagne-websites",
       "summary": "Een ontwerp dat overtuigt",
-      "description": "We ontwerpen websites die aansluiten bij jouw doelgroep en gericht zijn op maximaal resultaat."
+      "description": "We ontwerpen websites die aansluiten bij jouw doelgroep en gericht zijn op optimaal resultaat."
     },
     "third": {
       "name": "Dashboards & tracking",
@@ -52,7 +52,7 @@
   },
   "projects": {
     "heading": "Projecten",
-    "subtitle": "Hier zijn enkele projecten waar we met trots aan gewerkt hebben",
+    "subtitle": "Hier zijn enkele projecten waar we met trots aan gewerkt hebben.",
     "first": {
       "name": "Kudos Donations",
       "type": "WordPress-plugin voor non-profits",

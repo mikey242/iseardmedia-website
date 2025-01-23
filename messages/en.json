@@ -24,11 +24,11 @@
     }
   },
   "partners": {
-    "heading": "We've worked with some amazing organisations"
+    "heading": "We've worked with some amazing organisations."
   },
   "services": {
     "heading": "Services",
-    "subtitle": "Here’s how we make your marketing campaigns a success",
+    "subtitle": "Here’s how we make your marketing campaigns a success.",
     "first": {
       "name": "Strategy and planning",
       "summary": "Setting the right goals",
@@ -52,7 +52,7 @@
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Here are some of the projects we're proud to have worked on",
+    "subtitle": "Here are some of the projects we're proud to have worked on.",
     "first": {
       "name": "Kudos Donations",
       "type": "WordPress plugin for non-profits",
@@ -61,7 +61,7 @@
     "second": {
       "name": "Loosduinen Gaat Los",
       "type": "Website and marketing strategy",
-      "description": "We built this festival's website and give marketing support"
+      "description": "Festival website and marketing support"
     },
     "third": {
       "name": "BBOWT family walking trail",
