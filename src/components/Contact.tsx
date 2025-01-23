@@ -138,16 +138,18 @@ export default function Contact() {
               sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
               size="flexible"
             />
+            {message && (
+              <div>
+                <p className="mt-4 text-lg tracking-tight text-red-500">
+                  {message}
+                </p>
+              </div>
+            )}
             <div className="mt-10">
               <Button className="w-full text-xl lg:w-auto">
                 {t('form.submit')}
               </Button>
             </div>
-            {message && (
-              <div>
-                <Paragraph className="text-red-500">{message}</Paragraph>
-              </div>
-            )}
             <div className="mt-10">
               <p className="text-slate-700">
                 {t.rich('privacy.text', {
