@@ -10,10 +10,10 @@ export function Hero() {
     <div className="relative">
       <Gradient
         showGrid
-        className="absolute inset-2 bottom-0 -z-10 rounded-4xl ring-1 ring-inset ring-black/5"
+        className="absolute inset-2 bottom-0 -z-10 rounded-4xl ring-1 ring-black/5 ring-inset"
       />
-      <Container className="relative pb-16 pt-20 text-center lg:pt-32">
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+      <Container className="relative pt-20 pb-16 text-center lg:pt-32">
+        <h1 className="font-display mx-auto max-w-4xl text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
           {t('heading')}
         </h1>
         <Paragraph className="mx-auto mt-6 max-w-2xl text-slate-900">

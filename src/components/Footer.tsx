@@ -9,10 +9,10 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden text-center">
       {/*<GradientBackground />*/}
-      <Gradient className="absolute inset-0 bottom-0 ring-1 ring-inset ring-black/5" />
-      <div className="m-2 rounded-4xl bg-slate-50 bg-opacity-90">
+      <Gradient className="absolute inset-0 bottom-0 ring-1 ring-black/5 ring-inset" />
+      <div className="bg-opacity-90 m-2 rounded-4xl bg-slate-50">
         <Container>
-          <div className="pb-10 pt-16">
+          <div className="pt-16 pb-10">
             <Link href="/">
               <Logo className="mx-auto h-12 w-auto" />
             </Link>

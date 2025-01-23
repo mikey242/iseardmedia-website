@@ -78,7 +78,7 @@ function ProjectCard({
       ref={ref as React.Ref<HTMLDivElement>}
       style={{ opacity }}
       {...props}
-      className="relative flex aspect-[9/16] w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[3/4] sm:w-96"
+      className="relative flex aspect-9/16 w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96"
     >
       <Image
         alt=""
@@ -87,14 +87,14 @@ function ProjectCard({
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] to-[75%] ring-2 ring-inset ring-gray-950/10 sm:from-25%"
+        className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-[calc(7/16*100%)] to-75% ring-2 ring-gray-950/10 ring-inset sm:from-25%"
       />
       <figure className="relative p-10">
         <p className="relative text-xl/7 text-white">{children}</p>
         <figcaption className="mt-6 border-t border-white/20 pt-6">
           <p className="text-sm/6 font-medium text-white">{name}</p>
           <p className="text-sm/6 font-medium">
-            <span className="bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
               {type}
             </span>
           </p>
@@ -170,7 +170,7 @@ export function Projects() {
           'mt-16 flex gap-8 px-[var(--scroll-padding)]',
           '[scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
           'snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth',
-          '[--scroll-padding:max(theme(spacing.6),calc((100vw-theme(maxWidth.2xl))/2))] lg:[--scroll-padding:max(theme(spacing.8),calc((100vw-theme(maxWidth.7xl))/2))]',
+          '[--scroll-padding:max(--spacing(6),calc((100vw-(var(--container-2xl)))/2))] lg:[--scroll-padding:max(--spacing(8),calc((100vw-(var(--container-7xl)))/2))]',
         ])}
       >
         {projects.map(({ img, name, type, description }, projectIndex) => (
@@ -199,8 +199,8 @@ export function Projects() {
                 aria-label={`Scroll to testimonial from ${name}`}
                 className={clsx(
                   'size-3 rounded-full border border-transparent bg-gray-300 transition',
-                  'data-[active]:bg-primary data-[hover]:bg-gray-400',
-                  'forced-colors:data-[active]:bg-[Highlight] forced-colors:data-[focus]:outline-offset-4',
+                  'data-active:bg-primary data-hover:bg-gray-400',
+                  'forced-colors:data-active:bg-[Highlight] forced-colors:data-focus:outline-offset-4',
                 )}
               />
             ))}

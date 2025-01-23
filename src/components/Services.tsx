@@ -74,8 +74,8 @@ function ServicesMobile({ features }: Props) {
         <div key={feature.summary}>
           <Service feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
-            <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-800 ring-1 ring-white/15 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+            <div className="absolute -inset-x-4 top-8 bottom-0 bg-gray-800 ring-1 ring-white/15 sm:-inset-x-6" />
+            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white ring-1 shadow-lg shadow-slate-900/5 ring-slate-500/10">
               <Image
                 className="w-full"
                 src={feature.image}
@@ -102,7 +102,7 @@ function ServicesDesktop({ features }: Props) {
                 feature={{
                   ...feature,
                   name: (
-                    <Tab className="ui-not-focus-visible:outline-none">
+                    <Tab className="ui-not-focus-visible:outline-hidden">
                       <span className="absolute inset-0" />
                       {feature.name}
                     </Tab>
@@ -120,13 +120,13 @@ function ServicesDesktop({ features }: Props) {
                   static
                   key={feature.summary}
                   className={clsx(
-                    'px-5 transition duration-500 ease-in-out ui-not-focus-visible:outline-none',
+                    'ui-not-focus-visible:outline-hidden px-5 transition duration-500 ease-in-out',
                     featureIndex !== selectedIndex && 'opacity-60',
                   )}
                   style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                   aria-hidden={featureIndex !== selectedIndex}
                 >
-                  <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+                  <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white ring-1 shadow-lg shadow-slate-900/5 ring-slate-500/10">
                     <Image
                       className="w-full"
                       src={feature.image}
@@ -137,7 +137,7 @@ function ServicesDesktop({ features }: Props) {
                 </TabPanel>
               ))}
             </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
+            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-slate-900/10 ring-inset" />
           </TabPanels>
         </>
       )}
