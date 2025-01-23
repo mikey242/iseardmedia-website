@@ -1,5 +1,5 @@
 import { Link as I18NLink } from '@/i18n/routing'
-import NextLink from 'next/link'
+import NextLink, { LinkProps } from 'next/link'
 import React from 'react'
 import clsx from 'clsx'
 
@@ -21,17 +21,16 @@ export function NavLink({
 }
 
 export function Link({
-  href,
   children,
   className,
-}: {
-  href: string
-  children: React.ReactNode
+  ...props
+}: LinkProps & {
+  children?: React.ReactNode
   className?: string
 }) {
   return (
     <NextLink
-      href={href}
+      {...props}
       className={clsx(
         'inline-block rounded-lg text-slate-700 hover:text-slate-900',
         className,
