@@ -103,7 +103,7 @@ function ServicesDesktop({ features }: Props) {
                   ...feature,
                   name: (
                     <Tab className="ui-not-focus-visible:outline-hidden">
-                      <span className="absolute inset-0" />
+                      <span className="absolute inset-0 cursor-pointer" />
                       {feature.name}
                     </Tab>
                   ),
