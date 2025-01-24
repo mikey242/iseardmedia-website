@@ -1,6 +1,8 @@
-# Salient
+# Iseard Media website
 
-Salient is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+![banner](https://github.com/user-attachments/assets/39bcb13a-aca8-4bbe-a74a-101c49b6ccf6)
+
+Our website is built using [Tailwind UI](https://tailwindui.com), [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
 ## Getting started
 
@@ -21,10 +23,6 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 ## Customizing
 
 You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
-
-## License
-
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
 
 ## Learn more
 
