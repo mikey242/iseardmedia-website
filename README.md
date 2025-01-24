@@ -6,7 +6,7 @@ Our website is built using [Tailwind UI](https://tailwindui.com), [Tailwind CSS]
 
 ## Getting started
 
-To get started with this template, first install the npm dependencies:
+To get started, first install the npm dependencies:
 
 ```bash
 npm install
@@ -22,11 +22,11 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 
 ## Customizing
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+You can start editing this website by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
 
 ## Learn more
 
-To learn more about the technologies used in this site template, see the following resources:
+To learn more about the technologies used on our website, see the following resources:
 
 - [Tailwind CSS](https://tailwindcss.com/docs) - Tailwind CSS documentation
 - [Next.js](https://nextjs.org/docs) - Next.js documentation
