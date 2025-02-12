@@ -13,7 +13,11 @@ export function About() {
       <Container className="relative">
         <div className="mx-auto max-w-2xl md:text-center">
           <Heading dark>{t('heading')}</Heading>
-          <Paragraph dark>{t('subtitle')}</Paragraph>
+          <Paragraph dark>
+            {t.rich('subtitle', {
+              br: () => <br />
+            })}
+          </Paragraph>
           <Button
             href="#contact"
             color="white"
