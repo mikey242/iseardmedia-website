@@ -15,7 +15,7 @@ export function About() {
           <Heading dark>{t('heading')}</Heading>
           <Paragraph dark>
             {t.rich('subtitle', {
-              br: () => <br />
+              br: () => <br />,
             })}
           </Paragraph>
           <Button
